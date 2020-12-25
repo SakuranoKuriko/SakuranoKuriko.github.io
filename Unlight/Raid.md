@@ -95,24 +95,24 @@
 
 # 附图 #
 
-[^图1]: ![异矿](https://raw.githubusercontent.com/SakuranoKuriko/Unlight/master/img/异矿.jpg)
+[^图1]: ![异矿](img/异矿.jpg)
 
-[^图2]: ![魔材](https://raw.githubusercontent.com/SakuranoKuriko/Unlight/master/img/魔材.jpg)
+[^图2]: ![魔材](img/魔材.jpg)
 
-[^图3]: ![纹章](https://raw.githubusercontent.com/SakuranoKuriko/Unlight/master/img/纹章.jpg)
+[^图3]: ![纹章](img/纹章.jpg)
 
-[^图4]: ![合金](https://raw.githubusercontent.com/SakuranoKuriko/Unlight/master/img/合金.jpg)
+[^图4]: ![合金](img/合金.jpg)
 
-[^图5]: ![妖精](https://raw.githubusercontent.com/SakuranoKuriko/Unlight/master/img/妖精.jpg)
+[^图5]: ![妖精](img/妖精.jpg)
 
-[^图6]: ![海鲜](https://raw.githubusercontent.com/SakuranoKuriko/Unlight/master/img/海鲜.jpg)
+[^图6]: ![海鲜](img/海鲜.jpg)
 
-[^图7]: ![虫](https://raw.githubusercontent.com/SakuranoKuriko/Unlight/master/img/蛆.jpg)
+[^图7]: ![虫](img/蛆.jpg)
 
-[^图8]: ![龟](https://raw.githubusercontent.com/SakuranoKuriko/Unlight/master/img/龟.jpg)
+[^图8]: ![龟](img/龟.jpg)
 
-[^图9]: ![鱼](https://raw.githubusercontent.com/SakuranoKuriko/Unlight/master/img/龙鱼.jpg)
+[^图9]: ![鱼](img/龙鱼.jpg)
 
-[^图10]: ![死兽](https://raw.githubusercontent.com/SakuranoKuriko/Unlight/master/img/死兽.jpg)
+[^图10]: ![死兽](img/死兽.jpg)
 
-[^图11]: ![深远之息事件卡](https://raw.githubusercontent.com/SakuranoKuriko/Unlight/master/img/深远之息事件卡.jpg)
+[^图11]: ![深远之息事件卡](img/深远之息事件卡.jpg)
