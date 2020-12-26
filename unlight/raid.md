@@ -314,11 +314,11 @@ HP1/3以下时隐身：DEF+15，在自己的攻击阶段受到的伤害变成<fo
 
 # 物理技能与特殊技能
 
-## <font color=#ff6633>物理技能</font>
+## <font color="#ff6633">物理技能</font>
 
-## <font color=#3366ff>特殊技能</font>
+## <font color="#3366ff">特殊技能</font>
 
-## <font color=#ff33ff>无分类（不受硬化和吸收影响）</font>
+## <font color="#ff33ff">无分类（不受硬化和吸收影响）</font>
 
 |来自|技能|
 |-|-|
