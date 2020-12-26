@@ -354,7 +354,7 @@ L4以上[出叶](https://w.atwiki.jp/unlight-fbtw/pages/377.html)，R5[里斯](h
 
 
 
-## <span name="GeneralMethod">通用打法</span>
+## <span name="GeneralMethod" id="GeneralMethod">通用打法</span>
 
 除了海鲜以外都可以用的方法。
 
@@ -398,7 +398,7 @@ Ex洋地黄提高到延长3回合（3分钟）。
 
 
 
-#### <span name="buff39">39，或者叫999</span>
+#### <span name="buff39" id="buff39">39，或者叫999</span>
 
 指ATK↓9[^buff:ATK↓][^图标:ATK↓]、DEF↓9[^buff:DEF↓][^图标:DEF↓]、MOV↓9[^buff:MOV↓][^图标:MOV↓]
 
@@ -430,7 +430,7 @@ Ex洋地黄提高到延长3回合（3分钟）。
 
 
 
-#### <span name="buff2x">狂战士</span>[^buff:狂战士][^图标:狂战士]
+#### <span name="buff2x" id="buff2x">狂战士</span>[^buff:狂战士][^图标:狂战士]
 
 使用R4以上[玛格丽特](https://w.atwiki.jp/unlight-fbtw/pages/56.html)/[玛格丽特(N)](https://w.atwiki.jp/unlight-fbtw/pages/413.html)
 
@@ -446,7 +446,7 @@ N玛格丽特还会无视距离额外给对方「中毒」。
 
 
 
-#### <span name="buffnomovskill">傀儡</span>[^buff:傀儡][^图标:傀儡]
+#### <span name="buffnomovskill" id="buffnomovskill">傀儡</span>[^buff:傀儡][^图标:傀儡]
 
 使用L3以上[维若妮卡](https://w.atwiki.jp/unlight-fbtw/pages/466.html)
 
@@ -496,7 +496,7 @@ N玛格丽特还会无视距离额外给对方「中毒」。
 
 
 
-### <span name="buffparty">推荐组：一个人也做得到的全buff辅助组</span>
+### <span name="buffparty" id="buffparty">推荐组：一个人也做得到的全buff辅助组</span>
 
 ![39狂组](img/39狂组.jpg)
 
@@ -695,7 +695,7 @@ R1碧姬媞可以换R3，只是个人比较喜欢用R1，阿奇波尔多(N)为�
 
 
 
-### <span name="AdvanceFighter">进阶输出：里卡穿</span>
+### <span name="AdvanceFighter" id="AdvanceFighter">进阶输出：里卡穿</span>
 
 ![里卡穿](img/里卡穿.jpg)
 
