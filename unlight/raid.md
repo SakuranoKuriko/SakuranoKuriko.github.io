@@ -29,7 +29,7 @@
     }
 </style>
 <script>
-    document.querySelector('title').innerText = document.querySelector('.title').innerText;
+    document.querySelector('title').innerText = document.querySelector('#title').innerText;
     HTMLElement.prototype.appendHTML = function(html){
         let tmpel = document.createElement('div');
         let fragment = document.createDocumentFragment();
