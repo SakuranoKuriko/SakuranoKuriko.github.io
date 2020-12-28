@@ -11,7 +11,46 @@
     .heimu:hover{
         color: white;
     }
+    .md-footnote-view{
+        display: none;
+        z-index: 10;
+        position: absolute;
+        padding: 4px;
+        background: #eeeeee;
+        visibility: hidden;
+        opacity: 0;
+        transition: 0.2s linear;
+        font-size: small;
+    }
+    .md-footnote:hover .md-footnote-view{
+        display: inline-block;
+        visibility: visible;
+        opacity: 1;
+    }
 </style>
+<script>
+    HTMLElement.prototype.appendHTML = function(html){
+        let tmpel = document.createElement('div');
+        let fragment = document.createDocumentFragment();
+        tmpel.innerHTML = ''+html;
+        let nodes = tmpel.childNodes;
+        for(let i = 0, len = nodes.length; i<len ; i++)
+        fragment.appendChild(nodes[i]);
+        this.appendChild(fragment);
+    };
+    const addTooltip = (ignored)=>{
+		document.querySelectorAll('.md-footnote').forEach(el=>{
+            if (el.hastooltip) return;
+            el.appendHTML('<div class="md-footnote-view">' + document.querySelector('a[name="df' + el.firstChild.name + '"]').parentElement.children[1].outerHTML + '</div>');
+            el.hastooltip = true;
+        });
+    };
+    const addTooltipObserver = new MutationObserver(addTooltip);
+    addTooltipObserver.observe(document.querySelector('body'), { childList: true, subtree: true });
+</script>
+
+
+
 <font size=5>目录</font>
 
 [toc]
@@ -86,7 +125,7 @@
 
 虽然妖精、海鲜、死兽都有黑格[^注3]，但它们都没带诅咒[^事件卡:诅咒]、毒杯[^事件卡:毒杯]。
 
-白格往往是机会4[^事件卡:机会]。
+白格[^注3]往往是机会4[^事件卡:机会]。
 
 涡BOSS虽然不免疫封印[^buff:封印][^图标:封印]，但大多都有“难以被封印”效果的被动技能（获得封印异常状态的几率大幅降低）。
 
@@ -212,7 +251,7 @@ HP40%以下钻出来：ATK+7，受到的骰子伤害翻倍。
 
 ![反弹组](img/反弹组.jpg)
 
-复活沃肯为卡格担当。
+复活沃肯为卡格[^注3]担当。
 
 #### 使用角色
 
@@ -288,7 +327,7 @@ HP1/3以下时隐身：DEF+15，在自己的攻击阶段受到的伤害变成<fo
 
 ![出叶里斯组](img/出叶里斯组.jpg)
 
-复活多妮妲为卡格担当。
+复活多妮妲为卡格[^注3]担当。
 
 #### 使用角色
 
@@ -410,7 +449,7 @@ Ex洋地黄提高到延长3回合（3分钟）。
 
 使用任何能够快速使对方获得**任意数值**的这三个buff的角色或怪物卡 + L5/R1以上[泰瑞尔](https://w.atwiki.jp/unlight-fbtw/pages/305.html)。
 
-可以使用M3[妖精王妃](https://w.atwiki.jp/unlight-fbtw/pages/223.html#id_387789f7)、R1[弗雷特里西](https://w.atwiki.jp/unlight-fbtw/pages/55.html)([修罗架势](https://w.atwiki.jp/unlight-fbtw/pages/55.html#id_a6a10ab0))、[弗雷特里西(N)[^(N)]](https://w.atwiki.jp/unlight-fbtw/pages/373.html)([修罗的奥义](https://w.atwiki.jp/unlight-fbtw/pages/373.html#id_1877fd93))。
+可以使用M3[妖精王妃](https://w.atwiki.jp/unlight-fbtw/pages/223.html#id_387789f7)、R1[弗雷特里西](https://w.atwiki.jp/unlight-fbtw/pages/55.html)([修罗架势](https://w.atwiki.jp/unlight-fbtw/pages/55.html#id_a6a10ab0))、[弗雷特里西(N)](https://w.atwiki.jp/unlight-fbtw/pages/373.html)([修罗的奥义](https://w.atwiki.jp/unlight-fbtw/pages/373.html#id_1877fd93))。
 
 也可以直接用泰瑞尔（就是看脸，因为很容易吸到重复的）。
 
@@ -436,7 +475,7 @@ Ex洋地黄提高到延长3回合（3分钟）。
 
 #### <span name="buff2x" id="buff2x">狂战士</span>[^buff:狂战士][^图标:狂战士]
 
-使用R4以上[玛格丽特](https://w.atwiki.jp/unlight-fbtw/pages/56.html)/[玛格丽特(N)](https://w.atwiki.jp/unlight-fbtw/pages/413.html)
+使用R4以上[玛格丽特](https://w.atwiki.jp/unlight-fbtw/pages/56.html)/[玛格丽特(N)](https://w.atwiki.jp/unlight-fbtw/pages/413.html)[^N卡]
 
 **玛格丽特** 【[Ex末日幻影](https://w.atwiki.jp/unlight-fbtw/pages/56.html#id_0b66e462)】 移动阶段 / 全距离 / 剑1↑ 枪1↑ / 根据移动后的距离使对方获得异常状态（5~6回合）。
 
@@ -611,7 +650,7 @@ N玛格丽特还会无视距离额外给对方「中毒」。
 
 ![齿轮组](img/齿轮组.jpg)
 
-R1碧姬媞可以换R3，只是个人比较喜欢用R1，阿奇波尔多(N)为卡格担当（3绿2白）。
+R1碧姬媞可以换R3，只是个人比较喜欢用R1，阿奇波尔多(N)[^N卡]为卡格[^注3]担当（3绿2白）。
 
 
 
@@ -619,7 +658,7 @@ R1碧姬媞可以换R3，只是个人比较喜欢用R1，阿奇波尔多(N)为�
 
 #### 使用角色
 
-[艾伯李斯特(N)](https://w.atwiki.jp/unlight-fbtw/pages/315.html)[^(N)] + L5/R1以上[瑟法斯](https://w.atwiki.jp/unlight-fbtw/pages/457.html)。
+[艾伯李斯特(N)](https://w.atwiki.jp/unlight-fbtw/pages/315.html)[^N卡] + L5/R1以上[瑟法斯](https://w.atwiki.jp/unlight-fbtw/pages/457.html)。
 
 #### 战斗回合数
 
@@ -643,7 +682,7 @@ R1碧姬媞可以换R3，只是个人比较喜欢用R1，阿奇波尔多(N)为�
 
 #### 特殊需求
 
-艾伯需要强化了一定的近攻和近防数值的强化武器[^注5]，没有的话雷牌[^注9]效率会非常低，建议换其他组。
+艾伯需要强化了一定的近攻和近防数值的通武[^注5]，没有的话雷牌[^注9]效率会非常低，建议换其他组。
 
 瑟法斯最好能有4专[^注6]。
 
@@ -653,11 +692,11 @@ R1碧姬媞可以换R3，只是个人比较喜欢用R1，阿奇波尔多(N)为�
 
 #### 事件卡
 
-白格插满机会3，剩下的插满特、绑特的剑。
+白格插满机会3，剩下的插满特、绑特的剑[^双面卡]。
 
 #### 打法
 
-开场抢先手雷牌，抽干公牌后换瑟法斯，每回合只出2张卡：剑4↑，特2↑ 。
+开场拉到近距离抢先手雷牌，抽干公牌后换瑟法斯，每回合只出2张卡：剑4↑，特2↑ 。
 
 尽量优先使用事件卡，因为事件卡不会进入弃牌堆所以不会被涡BOSS下回合抽到。
 
@@ -665,13 +704,21 @@ R1碧姬媞可以换R3，只是个人比较喜欢用R1，阿奇波尔多(N)为�
 
 #### 细节
 
-当前阶段**使用**的卡在阶段结束后才会进入弃牌堆，因此紫电无法回收发动紫电时使用的卡，也无法回收涡BOSS防御时使用的卡。因此应该尽量不使用绑盾的剑卡。
+为什么要近距离雷牌：虽然紫电是近中距离，但中距离得出枪卡才有攻击力，产生额外的牌耗增加回收难度。因此通武[^注5]也是选择近攻的。
+
+当前阶段**使用**的卡在阶段结束后才会进入弃牌堆，因此紫电无法回收发动紫电时使用的卡，也无法回收涡BOSS防御时使用的卡。
 
 可以只使用事件卡发动紫电，或是抢先攻雷牌，在下一个阶段（即当回合防御阶段）用机会3[^事件卡:机会]抽回来。
 
 最后一回合（自行视情况判断）可以把手里的所有数值2以上的剑都丢出去（其他牌不能丢，不然会失去手牌差的攻击力加成），输出能高一点。
 
-涡BOSS防御时使用的卡只能用机会3回收。
+涡BOSS防御时使用的卡只能用机会3回收。因此应尽量不使用绑盾的剑卡[^双面卡]。
+
+雷完牌后回收涡BOSS手里的盾卡的方法（只能用机会3）
+
+* 盾卡绑移：期待涡BOSS在移动阶段丢出来，在下一阶段用机会3回收。
+* 盾卡绑剑且后攻则可以期待涡BOSS把盾作为剑丢出来，在下一阶段用机会3回收。
+* 其他情况：先攻：只用事件卡攻击，到自己防御阶段时用机会3回收涡BOSS刚使用的盾卡。（用公牌攻击也可以，只是公牌还得另行回收）
 
 #### 细节：打虫
 
@@ -682,8 +729,6 @@ R1碧姬媞可以换R3，只是个人比较喜欢用R1，阿奇波尔多(N)为�
 #### 细节：打鱼
 
 不要让鱼拿到盾2↑，否则会难以回收自己使用的卡，以及会出掷骰动画很浪费时间。
-
-回收鱼手里最后的盾的方法：在雷完牌后抢先攻，只用事件卡攻击，到自己防御阶段时用机会3回收鱼刚使用的盾卡。
 
 #### 细节：打死兽
 
@@ -697,7 +742,7 @@ R1碧姬媞可以换R3，只是个人比较喜欢用R1，阿奇波尔多(N)为�
 
 ![瑟法组](img/瑟法组.jpg)
 
-第三人带路德可以边打边延长buff，而佛罗伦斯(N)则是卡格担当（3红2白）。
+第三人带路德可以边打边延长buff，而佛罗伦斯(N)则是卡格[^注3]担当（3红2白）。
 
 
 
@@ -785,6 +830,8 @@ R1碧姬媞可以换R3，只是个人比较喜欢用R1，阿奇波尔多(N)为�
 
 穿穿的通用强化武器防御数值高的话可以第1或第2回合先换穿穿开一次十穿，可以减少雷完牌后的暖机总共使用的牌数，也就是减少会被涡BOSS抽走的牌数，降低翻车率。
 
+盾尽量用绑移[^双面卡]的，涡BOSS喜欢把绑移的盾在移动阶段丢出来。
+
 #### 细节：打虫
 
 虫必须有傀儡buff。
@@ -794,10 +841,6 @@ R1碧姬媞可以换R3，只是个人比较喜欢用R1，阿奇波尔多(N)为�
 所以造剑9时盾用绑移的而不是绑特的，或事件卡。
 
 所以穿穿暖机时也尽量用绑移的剑/枪而不是绑特的。
-
-#### 细节：打鱼
-
-盾尽量用绑移的。
 
 #### 细节：打死兽
 
@@ -824,6 +867,8 @@ R1碧姬媞可以换R3，只是个人比较喜欢用R1，阿奇波尔多(N)为�
 
 
 # 物理技能与特殊技能
+
+(N)：[^N卡]
 
 ## <font color="#ff6633">物理技能</font>
 
@@ -977,20 +1022,21 @@ R1碧姬媞可以换R3，只是个人比较喜欢用R1，阿奇波尔多(N)为�
 [^探3]: β型涡探测器3
 [^探4]: β型涡探测器4
 [^注:关于推荐组]: 推荐组只贴出最高配置，可以替换为技能够用的低等级卡。
-[^(N)]: 复活
+[^N卡]: 复活卡
 [^外号:闪闪]: 弗雷特里西。原因是因为他的前三个技能分别叫做「一闪」「十闪」「百闪」。
 [^外号:穿穿]: 复活弗雷特里西。原因是因为他的前两个技能分别叫做「十穿」「百穿」。
 [^注1]: 记忆的书签：在任务界面打开道具栏使用，可以搜索到能获得随机非氪金角色R1卡1张的任务。
 [^注2]: Darkroom
 [^注3]: 有底色的事件卡格子
 [^注4]: 无敌的妖精小姐能看透所有人的性别
-[^注5]: 强化武器，普通武器与异矿合成制作，强化满时最高可以提供仅任务·Raid有效的ATK·DEF白值各20点。
-[^注6]: 强化武器与纹章合成制作的角色专用武器，在强化武器的基础上额外提供仅任务·Raid有效的ATK·DEF白值各5点，并且附带降低角色一个技能的发动条件的特效（被动技能），只有L卡和R卡可以装备，N卡不能装备。
+[^注5]: 通用强化武器，普通武器与异矿合成制作，强化满时最高可以提供仅任务·Raid有效的ATK·DEF白值各20点。
+[^注6]: 通用强化武器与纹章合成制作的角色专用武器，在强化武器的基础上额外提供仅任务·Raid有效的ATK·DEF白值各5点，并且附带降低角色一个技能的发动条件的特效（被动技能），只有L卡和R卡可以装备，N卡不能装备。
 [^注7]: 公共牌堆根据战斗场景改变，大多数战斗场景的公共牌堆里特殊卡都不多。
 [^注8]: 手牌上限。回合开始时从公共牌堆抽取卡片直到手牌数达到这个上限。
 [^注9]: 指使用艾伯破坏对方手牌。打涡时也指用N艾伯破坏手牌抽干公牌。
 [^注10]: 兽人毁灭者：氪金限定特殊武器，连队成员(非复活)才可以装备，对龟类BOSS造成的伤害变成3倍。
 [^注11]: 指不按OK确定出牌，干等着时间条耗尽的行为。
+[^双面卡]: 双面的卡片，个人习惯在使用双面卡A面时称为绑B的A卡。
 [^事件卡:机会]: 抽取X张卡片
 [^事件卡:诅咒]: 破坏对方X张手牌，不能在移动阶段使用。
 [^事件卡:圣水]: 解除自己所有异常状态
