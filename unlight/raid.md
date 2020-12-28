@@ -1,8 +1,45 @@
 <font size=6>**<span id="title">涡(Raid)攻略 | Unlight</span>**</font>
 
+<div id="go2top">
+    <img id="go2top_bg" src="img/ticket_small.png" />
+    <div id="go2top_tip" onclick="window.scrollTo({top:0,behavior:'smooth'});"></div>
+</div>
 <style>
     img{
         background: white;
+    }
+    #go2top{
+        z-index: 10;
+        position: fixed;
+        right: 15%;
+        bottom: 5%;
+        box-shadow: 1px 1px 1px rgba(0,0,0,0);
+    }
+    #go2top:hover{
+        box-shadow: 1px 1px 1px rgba(0,0,0,.4);
+    }
+    #go2top > div{
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+    #go2top #go2top_tip{
+        font-size: 16px;
+        opacity: 0;
+        color: white;
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        font-weight: 500;
+        vertical-align: middle;
+        padding-right: 12px;
+        transition: 0.15s linear;
+    }
+    #go2top #go2top_tip:after{
+        content: 'Top';
+    }
+    #go2top #go2top_tip:hover{
+        opacity: 1;
     }
     .heimu{
         background: black;
@@ -54,6 +91,8 @@
     const addTooltipObserver = new MutationObserver(addTooltip);
     addTooltipObserver.observe(document.querySelector('body'), { childList: true, subtree: true });
 </script>
+
+
 <font size=5>目录</font>
 
 [toc]
