@@ -1,4 +1,4 @@
-# 涡(Raid)攻略 | Unlight
+<font size=6>**<span id="title">涡(Raid)攻略 | Unlight</span>**</font>
 
 <style>
     img{
@@ -29,6 +29,7 @@
     }
 </style>
 <script>
+    document.querySelector('title').innerText = document.querySelector('.title').innerText;
     HTMLElement.prototype.appendHTML = function(html){
         let tmpel = document.createElement('div');
         let fragment = document.createDocumentFragment();
@@ -39,7 +40,7 @@
         this.appendChild(fragment);
     };
     const addTooltip = (ignored)=>{
-		document.querySelectorAll('.md-footnote').forEach(el=>{
+    	document.querySelectorAll('.md-footnote').forEach(el=>{
             if (el.hastooltip) return;
             el.appendHTML('<div class="md-footnote-view">' + document.querySelector('a[name="df' + el.firstChild.name + '"]').parentElement.children[1].outerHTML + '</div>');
             el.hastooltip = true;
@@ -48,7 +49,6 @@
     const addTooltipObserver = new MutationObserver(addTooltip);
     addTooltipObserver.observe(document.querySelector('body'), { childList: true, subtree: true });
 </script>
-
 <font size=5>目录</font>
 
 [toc]
