@@ -379,7 +379,7 @@ L4以上[出叶](https://w.atwiki.jp/unlight-fbtw/pages/377.html)，R5[里斯](h
 
 现实时间20~29分、50~59分吸收：吸收对方的特殊攻击，并恢复自己最多5HP，受到的物理伤害翻倍。
 
-硬化和吸收只影响发动攻击技能时造成的骰子伤害，反伤技能、直伤不受影响，具体技能分类见[Google表格](https://docs.google.com/spreadsheets/d/1FK2RjusX2bHdAusvWapk8ZFJtnYUTs4h0yhtnQHxXSE/edit#gid=2043573874)（需翻墙）。
+硬化和吸收只影响发动攻击技能时造成的骰子伤害，反伤技能、直伤不受影响，具体技能分类见[物理技能与特殊技能](#skilltype)。
 
 一般普通攻击为物理伤害，物理伤害技能与特殊伤害技能同时发动则最终伤害不受硬化和吸收影响，但吸收时死兽还是会回血。
 
@@ -870,7 +870,7 @@ R1碧姬媞可以换R3，只是个人比较喜欢用R1，阿奇波尔多(N)[^N�
 
 
 
-# 物理技能与特殊技能
+# <span name="skilltype" id="skilltype">物理技能与特殊技能</span>
 
 (N)：[^N卡]
 
