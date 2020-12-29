@@ -493,7 +493,7 @@ Ex洋地黄提高到延长3回合（3分钟）。
 
 使用任何能够快速使对方获得**任意数值**的这三个buff的角色或怪物卡 + L5/R1以上[泰瑞尔](https://w.atwiki.jp/unlight-fbtw/pages/305.html)。
 
-可以使用M3[妖精王妃](https://w.atwiki.jp/unlight-fbtw/pages/223.html#id_387789f7)、R1[弗雷特里西](https://w.atwiki.jp/unlight-fbtw/pages/55.html)([修罗架势](https://w.atwiki.jp/unlight-fbtw/pages/55.html#id_a6a10ab0))、[弗雷特里西(N)](https://w.atwiki.jp/unlight-fbtw/pages/373.html)([修罗的奥义](https://w.atwiki.jp/unlight-fbtw/pages/373.html#id_1877fd93))。
+可以使用M3[妖精王妃](https://w.atwiki.jp/unlight-fbtw/pages/223.html#id_387789f7)、R1[弗雷特里西](https://w.atwiki.jp/unlight-fbtw/pages/55.html)([修罗架势](https://w.atwiki.jp/unlight-fbtw/pages/55.html#id_a6a10ab0))、[弗雷特里西(N)](https://w.atwiki.jp/unlight-fbtw/pages/373.html)[^N卡]\([修罗的奥义](https://w.atwiki.jp/unlight-fbtw/pages/373.html#id_1877fd93))。
 
 也可以直接用泰瑞尔（就是看脸，因为很容易吸到重复的）。
 
@@ -1079,7 +1079,7 @@ R1碧姬媞可以换R3，只是个人比较喜欢用R1，阿奇波尔多(N)[^N�
 [^探3]: β型涡探测器3
 [^探4]: β型涡探测器4
 [^注:关于推荐组]: 推荐组只贴出最高配置，可以替换为技能够用的低等级卡。
-[^N卡]: 复活卡
+[^N卡]: N卡：复活卡
 [^外号:闪闪]: 弗雷特里西，又名闪闪。原因是因为他的前三个技能分别叫做「一闪」「十闪」「百闪」。
 [^外号:穿穿]: 复活弗雷特里西，又名穿穿。原因是因为他的前两个技能分别叫做「十穿」「百穿」。
 [^注1]: 记忆的书签：在任务界面打开道具栏使用，可以搜索到能获得随机非氪金角色R1卡1张的任务。
