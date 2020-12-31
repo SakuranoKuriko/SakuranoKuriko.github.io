@@ -203,6 +203,14 @@ HP50%以下时进入夜雾：防御阶段最多只会受到20点骰伤，移动�
 
 ### 打法：猫鱼
 
+#### 推荐组（二选一）
+
+![猫鱼护士](img/猫鱼组.jpg)
+
+![猫鱼诺艾拉](img/猫鱼组2.jpg)
+
+第三人为主动自杀并额外增加牌格[^注8]的角色：[音音梦](https://w.atwiki.jp/unlight-fbtw/pages/284.html)([成长状态](https://w.atwiki.jp/unlight-fbtw/pages/284.html#id_27df2e3e)中使用[秘密苦药](https://w.atwiki.jp/unlight-fbtw/pages/284.html#id_cbc59dbc))、[诺艾拉](https://w.atwiki.jp/unlight-fbtw/pages/441.html)([冲击疗法](https://w.atwiki.jp/unlight-fbtw/pages/441.html#id_40cf8723))，这两个角色都需要L5/R1以上。
+
 #### 使用角色
 
 L3以上猫([艾茵](https://w.atwiki.jp/unlight-fbtw/pages/52.html))，L3以上鱼哥([柯布](https://w.atwiki.jp/unlight-fbtw/pages/273.html))
@@ -251,15 +259,7 @@ Ex酸蚀者条件降低至特1↑ 。
 
 被拉到中·远距离时手里要留好特2↑用于发动酸蚀者，避免被海鲜秒杀。
 
-<font color=red>**别忘了放鱼的时候把特殊事件卡一起扔出去。**</font>
-
-### 推荐组
-
-![猫鱼护士](img/猫鱼组.jpg)
-
-![猫鱼诺艾拉](img/猫鱼组2.jpg)
-
-第三人为主动自杀并额外增加牌格[^注8]的角色：[音音梦](https://w.atwiki.jp/unlight-fbtw/pages/284.html)([成长状态](https://w.atwiki.jp/unlight-fbtw/pages/284.html#id_27df2e3e)中使用[秘密苦药](https://w.atwiki.jp/unlight-fbtw/pages/284.html#id_cbc59dbc))、[诺艾拉](https://w.atwiki.jp/unlight-fbtw/pages/441.html)([冲击疗法](https://w.atwiki.jp/unlight-fbtw/pages/441.html#id_40cf8723))，这两个角色都需要L5/R1以上。
+<font color=red>**别忘了放鱼的时候把特殊事件卡一起丢出去。**</font>
 
 
 
@@ -291,7 +291,7 @@ HP40%以下钻出来：ATK+7，受到的骰子伤害翻倍。
 
 **注：虽然反弹打法比较轻松，但现在更流行通用打法，与反弹打法操作完全相反，请尊重涡主的选择。**
 
-### 推荐组（反弹）
+#### 推荐组
 
 ![反弹组](img/反弹组.jpg)
 
