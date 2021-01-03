@@ -88,7 +88,7 @@
             el.hastooltip = true;
         });
         document.querySelectorAll('a[href^="h"]').forEach(el=>{
-            el.setAttribute('target','_blank')
+            el.setAttribute('target','_blank');
         });
     };
     const watchObserver = new MutationObserver(updateDOM);
