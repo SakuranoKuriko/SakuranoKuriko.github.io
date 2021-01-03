@@ -171,9 +171,11 @@
 
 # 攻略中用到的M卡(怪物卡)介绍
 
+注：卡图的数值是旧数值，在更新强化武器后所有怪物卡数值都被上调了。
+
 ## <span name="齿轮介绍" id="齿轮介绍">[齿轮](https://w.atwiki.jp/unlight-fbtw/pages/223.html#id_8a5c3e30)</span>
 
-![M1齿轮](img/M1齿轮.jpg)![M2齿轮](img/M2齿轮.jpg)![M3齿轮](img/M3齿轮.jpg)
+![M1齿轮](img/M1齿轮.jpg) ![M2齿轮](img/M2齿轮.jpg) ![M3齿轮](img/M3齿轮.jpg)
 
 ### 技能
 
@@ -201,7 +203,7 @@
 
 ## <span name="妖精王妃介绍" id="妖精王妃介绍">[妖精王妃](https://w.atwiki.jp/unlight-fbtw/pages/223.html#id_387789f7)</span>
 
-![M1哈耳庇厄](img/M1哈耳庇厄.jpg)![M2赛莲](img/M2赛莲.jpg)![M3妖精王妃](img/M3妖精王妃.jpg)
+![M1哈耳庇厄](img/M1哈耳庇厄.jpg) ![M2赛莲](img/M2赛莲.jpg) ![M3妖精王妃](img/M3妖精王妃.jpg)
 
 ### 技能
 
