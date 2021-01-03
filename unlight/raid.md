@@ -81,15 +81,18 @@
         fragment.appendChild(nodes[i]);
         this.appendChild(fragment);
     };
-    const addTooltip = (ignored)=>{
+    const updateDOM = (ignored)=>{
     	document.querySelectorAll('.md-footnote').forEach(el=>{
             if (el.hastooltip) return;
             el.appendHTML('<div class="md-footnote-view">' + document.querySelector('a[name="df' + el.firstChild.name + '"]').parentElement.children[1].outerHTML + '</div>');
             el.hastooltip = true;
         });
+        document.querySelectorAll('a[href^="h"]').forEach(el=>{
+            el.setAttribute('target','_blank')
+        });
     };
-    const addTooltipObserver = new MutationObserver(addTooltip);
-    addTooltipObserver.observe(document.querySelector('body'), { childList: true, subtree: true });
+    const watchObserver = new MutationObserver(updateDOM);
+    watchObserver.observe(document.querySelector('body'), { childList: true, subtree: true });
 </script>
 
 
