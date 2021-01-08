@@ -1,0 +1,31 @@
+img{
+    background: white;
+}
+.heimu{
+    background: black;
+    color: black;
+}
+.heimu:hover{
+    color: white;
+}
+.md-footnote-view{
+    display: none;
+    z-index: 10;
+    position: absolute;
+    padding: 5px;
+    margin-left: 4px;
+    background: #eeeeee;
+    border: 1px solid #dddddd;
+    border-radius: 5px;
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.2s linear;
+    font-size: small;
+    font-weight: normal;
+    box-shadow: 2px 2px 3px rgba(0,0,0,.35);
+}
+.md-footnote:hover .md-footnote-view{
+    display: inline-block;
+    visibility: visible;
+    opacity: 1;
+}

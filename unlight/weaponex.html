@@ -1,0 +1,565 @@
+<!doctype html>
+<html>
+<head>
+<meta charset='UTF-8'><meta name='viewport' content='width=device-width initial-scale=1'>
+<title>weaponex</title><link href='https://fonts.loli.net/css?family=Open+Sans:400italic,700italic,700,400&subset=latin,latin-ext' rel='stylesheet' type='text/css' /><style type='text/css'>html {overflow-x: initial !important;}:root { --bg-color:#ffffff; --text-color:#333333; --select-text-bg-color:#B5D6FC; --select-text-font-color:auto; --monospace:"Lucida Console",Consolas,"Courier",monospace; --title-bar-height:20px; }
+.mac-os-11 { --title-bar-height:28px; }
+html { font-size: 14px; background-color: var(--bg-color); color: var(--text-color); font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; -webkit-font-smoothing: antialiased; }
+body { margin: 0px; padding: 0px; height: auto; bottom: 0px; top: 0px; left: 0px; right: 0px; font-size: 1rem; line-height: 1.42857; overflow-x: hidden; background: inherit; tab-size: 4; }
+iframe { margin: auto; }
+a.url { word-break: break-all; }
+a:active, a:hover { outline: 0px; }
+.in-text-selection, ::selection { text-shadow: none; background: var(--select-text-bg-color); color: var(--select-text-font-color); }
+#write { margin: 0px auto; height: auto; width: inherit; word-break: normal; overflow-wrap: break-word; position: relative; white-space: normal; overflow-x: visible; padding-top: 36px; }
+#write.first-line-indent p { text-indent: 2em; }
+#write.first-line-indent li p, #write.first-line-indent p * { text-indent: 0px; }
+#write.first-line-indent li { margin-left: 2em; }
+.for-image #write { padding-left: 8px; padding-right: 8px; }
+body.typora-export { padding-left: 30px; padding-right: 30px; }
+.typora-export .footnote-line, .typora-export li, .typora-export p { white-space: pre-wrap; }
+.typora-export .task-list-item input { pointer-events: none; }
+@media screen and (max-width: 500px) {
+  body.typora-export { padding-left: 0px; padding-right: 0px; }
+  #write { padding-left: 20px; padding-right: 20px; }
+  .CodeMirror-sizer { margin-left: 0px !important; }
+  .CodeMirror-gutters { display: none !important; }
+}
+#write li > figure:last-child { margin-bottom: 0.5rem; }
+#write ol, #write ul { position: relative; }
+img { max-width: 100%; vertical-align: middle; image-orientation: from-image; }
+button, input, select, textarea { color: inherit; font: inherit; }
+input[type="checkbox"], input[type="radio"] { line-height: normal; padding: 0px; }
+*, ::after, ::before { box-sizing: border-box; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p, #write pre { width: inherit; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p { position: relative; }
+p { line-height: inherit; }
+h1, h2, h3, h4, h5, h6 { break-after: avoid-page; break-inside: avoid; orphans: 4; }
+p { orphans: 4; }
+h1 { font-size: 2rem; }
+h2 { font-size: 1.8rem; }
+h3 { font-size: 1.6rem; }
+h4 { font-size: 1.4rem; }
+h5 { font-size: 1.2rem; }
+h6 { font-size: 1rem; }
+.md-math-block, .md-rawblock, h1, h2, h3, h4, h5, h6, p { margin-top: 1rem; margin-bottom: 1rem; }
+.hidden { display: none; }
+.md-blockmeta { color: rgb(204, 204, 204); font-weight: 700; font-style: italic; }
+a { cursor: pointer; }
+sup.md-footnote { padding: 2px 4px; background-color: rgba(238, 238, 238, 0.7); color: rgb(85, 85, 85); border-radius: 4px; cursor: pointer; }
+sup.md-footnote a, sup.md-footnote a:hover { color: inherit; text-transform: inherit; text-decoration: inherit; }
+#write input[type="checkbox"] { cursor: pointer; width: inherit; height: inherit; }
+figure { overflow-x: auto; margin: 1.2em 0px; max-width: calc(100% + 16px); padding: 0px; }
+figure > table { margin: 0px; }
+tr { break-inside: avoid; break-after: auto; }
+thead { display: table-header-group; }
+table { border-collapse: collapse; border-spacing: 0px; width: 100%; overflow: auto; break-inside: auto; text-align: left; }
+table.md-table td { min-width: 32px; }
+.CodeMirror-gutters { border-right: 0px; background-color: inherit; }
+.CodeMirror-linenumber { user-select: none; }
+.CodeMirror { text-align: left; }
+.CodeMirror-placeholder { opacity: 0.3; }
+.CodeMirror pre { padding: 0px 4px; }
+.CodeMirror-lines { padding: 0px; }
+div.hr:focus { cursor: none; }
+#write pre { white-space: pre-wrap; }
+#write.fences-no-line-wrapping pre { white-space: pre; }
+#write pre.ty-contain-cm { white-space: normal; }
+.CodeMirror-gutters { margin-right: 4px; }
+.md-fences { font-size: 0.9rem; display: block; break-inside: avoid; text-align: left; overflow: visible; white-space: pre; background: inherit; position: relative !important; }
+.md-diagram-panel { width: 100%; margin-top: 10px; text-align: center; padding-top: 0px; padding-bottom: 8px; overflow-x: auto; }
+#write .md-fences.mock-cm { white-space: pre-wrap; }
+.md-fences.md-fences-with-lineno { padding-left: 0px; }
+#write.fences-no-line-wrapping .md-fences.mock-cm { white-space: pre; overflow-x: auto; }
+.md-fences.mock-cm.md-fences-with-lineno { padding-left: 8px; }
+.CodeMirror-line, twitterwidget { break-inside: avoid; }
+.footnotes { opacity: 0.8; font-size: 0.9rem; margin-top: 1em; margin-bottom: 1em; }
+.footnotes + .footnotes { margin-top: 0px; }
+.md-reset { margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: top; background: 0px 0px; text-decoration: none; text-shadow: none; float: none; position: static; width: auto; height: auto; white-space: nowrap; cursor: inherit; -webkit-tap-highlight-color: transparent; line-height: normal; font-weight: 400; text-align: left; box-sizing: content-box; direction: ltr; }
+li div { padding-top: 0px; }
+blockquote { margin: 1rem 0px; }
+li .mathjax-block, li p { margin: 0.5rem 0px; }
+li blockquote { margin: 1rem 0px; }
+li { margin: 0px; position: relative; }
+blockquote > :last-child { margin-bottom: 0px; }
+blockquote > :first-child, li > :first-child { margin-top: 0px; }
+.footnotes-area { color: rgb(136, 136, 136); margin-top: 0.714rem; padding-bottom: 0.143rem; white-space: normal; }
+#write .footnote-line { white-space: pre-wrap; }
+@media print {
+  body, html { border: 1px solid transparent; height: 99%; break-after: avoid; break-before: avoid; font-variant-ligatures: no-common-ligatures; }
+  #write { margin-top: 0px; padding-top: 0px; border-color: transparent !important; }
+  .typora-export * { -webkit-print-color-adjust: exact; }
+  .typora-export #write { break-after: avoid; }
+  .typora-export #write::after { height: 0px; }
+  .is-mac table { break-inside: avoid; }
+}
+.footnote-line { margin-top: 0.714em; font-size: 0.7em; }
+a img, img a { cursor: pointer; }
+pre.md-meta-block { font-size: 0.8rem; min-height: 0.8rem; white-space: pre-wrap; background: rgb(204, 204, 204); display: block; overflow-x: hidden; }
+p > .md-image:only-child:not(.md-img-error) img, p > img:only-child { display: block; margin: auto; }
+#write.first-line-indent p > .md-image:only-child:not(.md-img-error) img { left: -2em; position: relative; }
+p > .md-image:only-child { display: inline-block; width: 100%; }
+#write .MathJax_Display { margin: 0.8em 0px 0px; }
+.md-math-block { width: 100%; }
+.md-math-block:not(:empty)::after { display: none; }
+.MathJax_ref { fill: currentcolor; }
+[contenteditable="true"]:active, [contenteditable="true"]:focus, [contenteditable="false"]:active, [contenteditable="false"]:focus { outline: 0px; box-shadow: none; }
+.md-task-list-item { position: relative; list-style-type: none; }
+.task-list-item.md-task-list-item { padding-left: 0px; }
+.md-task-list-item > input { position: absolute; top: 0px; left: 0px; margin-left: -1.2em; margin-top: calc(1em - 10px); border: none; }
+.math { font-size: 1rem; }
+.md-toc { min-height: 3.58rem; position: relative; font-size: 0.9rem; border-radius: 10px; }
+.md-toc-content { position: relative; margin-left: 0px; }
+.md-toc-content::after, .md-toc::after { display: none; }
+.md-toc-item { display: block; color: rgb(65, 131, 196); }
+.md-toc-item a { text-decoration: none; }
+.md-toc-inner:hover { text-decoration: underline; }
+.md-toc-inner { display: inline-block; cursor: pointer; }
+.md-toc-h1 .md-toc-inner { margin-left: 0px; font-weight: 700; }
+.md-toc-h2 .md-toc-inner { margin-left: 2em; }
+.md-toc-h3 .md-toc-inner { margin-left: 4em; }
+.md-toc-h4 .md-toc-inner { margin-left: 6em; }
+.md-toc-h5 .md-toc-inner { margin-left: 8em; }
+.md-toc-h6 .md-toc-inner { margin-left: 10em; }
+@media screen and (max-width: 48em) {
+  .md-toc-h3 .md-toc-inner { margin-left: 3.5em; }
+  .md-toc-h4 .md-toc-inner { margin-left: 5em; }
+  .md-toc-h5 .md-toc-inner { margin-left: 6.5em; }
+  .md-toc-h6 .md-toc-inner { margin-left: 8em; }
+}
+a.md-toc-inner { font-size: inherit; font-style: inherit; font-weight: inherit; line-height: inherit; }
+.footnote-line a:not(.reversefootnote) { color: inherit; }
+.md-attr { display: none; }
+.md-fn-count::after { content: "."; }
+code, pre, samp, tt { font-family: var(--monospace); }
+kbd { margin: 0px 0.1em; padding: 0.1em 0.6em; font-size: 0.8em; color: rgb(36, 39, 41); background: rgb(255, 255, 255); border: 1px solid rgb(173, 179, 185); border-radius: 3px; box-shadow: rgba(12, 13, 14, 0.2) 0px 1px 0px, rgb(255, 255, 255) 0px 0px 0px 2px inset; white-space: nowrap; vertical-align: middle; }
+.md-comment { color: rgb(162, 127, 3); opacity: 0.8; font-family: var(--monospace); }
+code { text-align: left; vertical-align: initial; }
+a.md-print-anchor { white-space: pre !important; border-width: initial !important; border-style: none !important; border-color: initial !important; display: inline-block !important; position: absolute !important; width: 1px !important; right: 0px !important; outline: 0px !important; background: 0px 0px !important; text-decoration: initial !important; text-shadow: initial !important; }
+.md-inline-math .MathJax_SVG .noError { display: none !important; }
+.html-for-mac .inline-math-svg .MathJax_SVG { vertical-align: 0.2px; }
+.md-math-block .MathJax_SVG_Display { text-align: center; margin: 0px; position: relative; text-indent: 0px; max-width: none; max-height: none; min-height: 0px; min-width: 100%; width: auto; overflow-y: hidden; display: block !important; }
+.MathJax_SVG_Display, .md-inline-math .MathJax_SVG_Display { width: auto; margin: inherit; display: inline-block !important; }
+.MathJax_SVG .MJX-monospace { font-family: var(--monospace); }
+.MathJax_SVG .MJX-sans-serif { font-family: sans-serif; }
+.MathJax_SVG { display: inline; font-style: normal; font-weight: 400; line-height: normal; zoom: 90%; text-indent: 0px; text-align: left; text-transform: none; letter-spacing: normal; word-spacing: normal; overflow-wrap: normal; white-space: nowrap; float: none; direction: ltr; max-width: none; max-height: none; min-width: 0px; min-height: 0px; border: 0px; padding: 0px; margin: 0px; }
+.MathJax_SVG * { transition: none 0s ease 0s; }
+.MathJax_SVG_Display svg { vertical-align: middle !important; margin-bottom: 0px !important; margin-top: 0px !important; }
+.os-windows.monocolor-emoji .md-emoji { font-family: "Segoe UI Symbol", sans-serif; }
+.md-diagram-panel > svg { max-width: 100%; }
+[lang="flow"] svg, [lang="mermaid"] svg { max-width: 100%; height: auto; }
+[lang="mermaid"] .node text { font-size: 1rem; }
+table tr th { border-bottom: 0px; }
+video { max-width: 100%; display: block; margin: 0px auto; }
+iframe { max-width: 100%; width: 100%; border: none; }
+.highlight td, .highlight tr { border: 0px; }
+mark { background: rgb(255, 255, 0); color: rgb(0, 0, 0); }
+.md-html-inline .md-plain, .md-html-inline strong, mark .md-inline-math, mark strong { color: inherit; }
+mark .md-meta { color: rgb(0, 0, 0); opacity: 0.3 !important; }
+@media print {
+  .typora-export h1, .typora-export h2, .typora-export h3, .typora-export h4, .typora-export h5, .typora-export h6 { break-inside: avoid; }
+}
+.md-diagram-panel .messageText { stroke: none !important; }
+.md-diagram-panel .start-state { fill: var(--node-fill); }
+.md-diagram-panel .edgeLabel rect { opacity: 1 !important; }
+.md-require-zoom-fix foreignobject { font-size: var(--mermaid-font-zoom); }
+
+
+:root {
+    --side-bar-bg-color: #fafafa;
+    --control-text-color: #777;
+}
+
+@include-when-export url(https://fonts.loli.net/css?family=Open+Sans:400italic,700italic,700,400&subset=latin,latin-ext);
+
+/* open-sans-regular - latin-ext_latin */
+  /* open-sans-italic - latin-ext_latin */
+    /* open-sans-700 - latin-ext_latin */
+    /* open-sans-700italic - latin-ext_latin */
+  html {
+    font-size: 16px;
+}
+
+body {
+    font-family: "Open Sans","Clear Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: rgb(51, 51, 51);
+    line-height: 1.6;
+}
+
+#write {
+    max-width: 860px;
+  	margin: 0 auto;
+  	padding: 30px;
+    padding-bottom: 100px;
+}
+
+@media only screen and (min-width: 1400px) {
+	#write {
+		max-width: 1024px;
+	}
+}
+
+@media only screen and (min-width: 1800px) {
+	#write {
+		max-width: 1200px;
+	}
+}
+
+#write > ul:first-child,
+#write > ol:first-child{
+    margin-top: 30px;
+}
+
+a {
+    color: #4183C4;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    position: relative;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    font-weight: bold;
+    line-height: 1.4;
+    cursor: text;
+}
+h1:hover a.anchor,
+h2:hover a.anchor,
+h3:hover a.anchor,
+h4:hover a.anchor,
+h5:hover a.anchor,
+h6:hover a.anchor {
+    text-decoration: none;
+}
+h1 tt,
+h1 code {
+    font-size: inherit;
+}
+h2 tt,
+h2 code {
+    font-size: inherit;
+}
+h3 tt,
+h3 code {
+    font-size: inherit;
+}
+h4 tt,
+h4 code {
+    font-size: inherit;
+}
+h5 tt,
+h5 code {
+    font-size: inherit;
+}
+h6 tt,
+h6 code {
+    font-size: inherit;
+}
+h1 {
+    font-size: 2.25em;
+    line-height: 1.2;
+    border-bottom: 1px solid #eee;
+}
+h2 {
+    font-size: 1.75em;
+    line-height: 1.225;
+    border-bottom: 1px solid #eee;
+}
+
+/*@media print {
+    .typora-export h1,
+    .typora-export h2 {
+        border-bottom: none;
+        padding-bottom: initial;
+    }
+
+    .typora-export h1::after,
+    .typora-export h2::after {
+        content: "";
+        display: block;
+        height: 100px;
+        margin-top: -96px;
+        border-top: 1px solid #eee;
+    }
+}*/
+
+h3 {
+    font-size: 1.5em;
+    line-height: 1.43;
+}
+h4 {
+    font-size: 1.25em;
+}
+h5 {
+    font-size: 1em;
+}
+h6 {
+   font-size: 1em;
+    color: #777;
+}
+p,
+blockquote,
+ul,
+ol,
+dl,
+table{
+    margin: 0.8em 0;
+}
+li>ol,
+li>ul {
+    margin: 0 0;
+}
+hr {
+    height: 2px;
+    padding: 0;
+    margin: 16px 0;
+    background-color: #e7e7e7;
+    border: 0 none;
+    overflow: hidden;
+    box-sizing: content-box;
+}
+
+li p.first {
+    display: inline-block;
+}
+ul,
+ol {
+    padding-left: 30px;
+}
+ul:first-child,
+ol:first-child {
+    margin-top: 0;
+}
+ul:last-child,
+ol:last-child {
+    margin-bottom: 0;
+}
+blockquote {
+    border-left: 4px solid #dfe2e5;
+    padding: 0 15px;
+    color: #777777;
+}
+blockquote blockquote {
+    padding-right: 0;
+}
+table {
+    padding: 0;
+    word-break: initial;
+}
+table tr {
+    border-top: 1px solid #dfe2e5;
+    margin: 0;
+    padding: 0;
+}
+table tr:nth-child(2n),
+thead {
+    background-color: #f8f8f8;
+}
+table th {
+    font-weight: bold;
+    border: 1px solid #dfe2e5;
+    border-bottom: 0;
+    margin: 0;
+    padding: 6px 13px;
+}
+table td {
+    border: 1px solid #dfe2e5;
+    margin: 0;
+    padding: 6px 13px;
+}
+table th:first-child,
+table td:first-child {
+    margin-top: 0;
+}
+table th:last-child,
+table td:last-child {
+    margin-bottom: 0;
+}
+
+.CodeMirror-lines {
+    padding-left: 4px;
+}
+
+.code-tooltip {
+    box-shadow: 0 1px 1px 0 rgba(0,28,36,.3);
+    border-top: 1px solid #eef2f2;
+}
+
+.md-fences,
+code,
+tt {
+    border: 1px solid #e7eaed;
+    background-color: #f8f8f8;
+    border-radius: 3px;
+    padding: 0;
+    padding: 2px 4px 0px 4px;
+    font-size: 0.9em;
+}
+
+code {
+    background-color: #f3f4f4;
+    padding: 0 2px 0 2px;
+}
+
+.md-fences {
+    margin-bottom: 15px;
+    margin-top: 15px;
+    padding-top: 8px;
+    padding-bottom: 6px;
+}
+
+
+.md-task-list-item > input {
+  margin-left: -1.3em;
+}
+
+@media print {
+    html {
+        font-size: 13px;
+    }
+    table,
+    pre {
+        page-break-inside: avoid;
+    }
+    pre {
+        word-wrap: break-word;
+    }
+}
+
+.md-fences {
+	background-color: #f8f8f8;
+}
+#write pre.md-meta-block {
+	padding: 1rem;
+    font-size: 85%;
+    line-height: 1.45;
+    background-color: #f7f7f7;
+    border: 0;
+    border-radius: 3px;
+    color: #777777;
+    margin-top: 0 !important;
+}
+
+.mathjax-block>.code-tooltip {
+	bottom: .375rem;
+}
+
+.md-mathjax-midline {
+    background: #fafafa;
+}
+
+#write>h3.md-focus:before{
+	left: -1.5625rem;
+	top: .375rem;
+}
+#write>h4.md-focus:before{
+	left: -1.5625rem;
+	top: .285714286rem;
+}
+#write>h5.md-focus:before{
+	left: -1.5625rem;
+	top: .285714286rem;
+}
+#write>h6.md-focus:before{
+	left: -1.5625rem;
+	top: .285714286rem;
+}
+.md-image>.md-meta {
+    /*border: 1px solid #ddd;*/
+    border-radius: 3px;
+    padding: 2px 0px 0px 4px;
+    font-size: 0.9em;
+    color: inherit;
+}
+
+.md-tag {
+    color: #a7a7a7;
+    opacity: 1;
+}
+
+.md-toc { 
+    margin-top:20px;
+    padding-bottom:20px;
+}
+
+.sidebar-tabs {
+    border-bottom: none;
+}
+
+#typora-quick-open {
+    border: 1px solid #ddd;
+    background-color: #f8f8f8;
+}
+
+#typora-quick-open-item {
+    background-color: #FAFAFA;
+    border-color: #FEFEFE #e5e5e5 #e5e5e5 #eee;
+    border-style: solid;
+    border-width: 1px;
+}
+
+/** focus mode */
+.on-focus-mode blockquote {
+    border-left-color: rgba(85, 85, 85, 0.12);
+}
+
+header, .context-menu, .megamenu-content, footer{
+    font-family: "Segoe UI", "Arial", sans-serif;
+}
+
+.file-node-content:hover .file-node-icon,
+.file-node-content:hover .file-node-open-state{
+    visibility: visible;
+}
+
+.mac-seamless-mode #typora-sidebar {
+    background-color: #fafafa;
+    background-color: var(--side-bar-bg-color);
+}
+
+.md-lang {
+    color: #b4654d;
+}
+
+.html-for-mac .context-menu {
+    --item-hover-bg-color: #E6F0FE;
+}
+
+#md-notification .btn {
+    border: 0;
+}
+
+.dropdown-menu .divider {
+    border-color: #e5e5e5;
+}
+
+.ty-preferences .window-content {
+    background-color: #fafafa;
+}
+
+.ty-preferences .nav-group-item.active {
+    color: white;
+    background: #999;
+}
+
+
+</style>
+</head>
+<body class='typora-export os-windows'>
+<div id='write'  class=''><p><font size=6><strong><span id="title"><span>强化武器攻略 | Unlight</span></span></strong></font></p><div id="go2top"></div><link rel="stylesheet" href="css/mdex.css" /><script type="text/javascript" src="js/mdex.js"></script><link rel="stylesheet" href="css/unlight_go2top.css" /><script type="text/javascript" src="js/unlight_go2top.js"></script><p><font size=5><span>目录</span></font></p><div class='md-toc' mdtype='toc'><p class="md-toc-content" role="list"><span role="listitem" class="md-toc-item md-toc-h1" data-ref="n13868"><a class="md-toc-inner" href="#介绍及做法">介绍及做法</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n13869"><a class="md-toc-inner" href="#材料入手攻略涡raid攻略raidhtml">材料入手攻略：涡(Raid)攻略</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n13870"><a class="md-toc-inner" href="#通用强化武器通武）">通用强化武器（通武）</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n13883"><a class="md-toc-inner" href="#制作方法">制作方法</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n13891"><a class="md-toc-inner" href="#继续强化">继续强化</a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n13926"><a class="md-toc-inner" href="#各素材对应数值">各素材对应数值</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n13949"><a class="md-toc-inner" href="#专用强化武器4专注1）">专用强化武器（4专）</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n13962"><a class="md-toc-inner" href="#制作方法-n13962">制作方法</a></span><span role="listitem" class="md-toc-item md-toc-h1" data-ref="n13971"><a class="md-toc-inner" href="#全4专资料及卡面httpswatwikijpunlight-fbtwpages463html">全4专资料及卡面</a></span><span role="listitem" class="md-toc-item md-toc-h1" data-ref="n13973"><a class="md-toc-inner" href="#span-name角色对应纹章-id角色对应纹章角色对应纹章span">角色对应纹章</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n13975"><a class="md-toc-inner" href="#按角色">按角色</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n14362"><a class="md-toc-inner" href="#按纹章">按纹章</a></span><span role="listitem" class="md-toc-item md-toc-h1" data-ref="n14835"><a class="md-toc-inner" href="#span-name专属被动技能-id专属被动技能专属被动技能span">专属被动技能</a></span><span role="listitem" class="md-toc-item md-toc-h1" data-ref="n15380"><a class="md-toc-inner" href="#尾注注释黑话附图">尾注：注释、黑话、附图</a></span></p></div><h1><a name="介绍及做法" class="md-header-anchor"></a><span>介绍及做法</span></h1><h2><a name="材料入手攻略涡raid攻略raidhtml" class="md-header-anchor"></a><span>材料入手攻略：</span><a href='raid.html'><span>涡(Raid)攻略</span></a></h2><h2><a name="通用强化武器通武）" class="md-header-anchor"></a><span>通用强化武器（通武）</span></h2><p><img src="img/通武_近攻9.png" referrerpolicy="no-referrer" alt="近攻9通武"></p><ul><li><span>所有角色&amp;怪物都可以装备。</span></li><li><span>第一行数值为通用数值，单项数值范围为 - 2 ~ 9，合计值上限为 2，添加琉璃宝玉可提升至合计值上限3。4项数值可自由调整。</span></li><li><span>第二行数值为任务&amp;涡专用数值，上限为当前等级，也可以叫PVE数值。</span></li><li><span>等级上限为 Lv20 。即PVE数值最大为 4 项各 20 。</span></li></ul><p><em><span>依照第一行数值自动变化为匕首/弹药/戒指/手镯/近装/远装/枪剑，仅仅只有外观和名称会发生变化。</span></em></p><p>&nbsp;</p><h3><a name="制作方法" class="md-header-anchor"></a><span>制作方法</span></h3><ol start='' ><li><span>准备一把普通武器，建议使用妖魔短剑</span><sup class='md-footnote'><a href='#dfref-footnote-1' name='ref-footnote-1'>1</a></sup><span>/弹药</span><sup class='md-footnote'><a href='#dfref-footnote-2' name='ref-footnote-2'>2</a></sup><span>/戒指</span><sup class='md-footnote'><a href='#dfref-footnote-3' name='ref-footnote-3'>3</a></sup><span>（可以直接在商店购买，需要 1000Gem + 10 个 铁币/铜币/银币 + 1 个金币）。</span></li><li><span>点击这把武器选择 Level UP!，添加一颗异矿</span><sup class='md-footnote'><a href='#dfref-footnote-4' name='ref-footnote-4'>4</a></sup><span>进行强化合成。</span></li><li><span>获得初始值的强化武器（通用数值随机1项+1、随机1项-1、合计值上限2，PVE数值全0）。</span></li></ol><h3><a name="继续强化" class="md-header-anchor"></a><span>继续强化</span></h3><ul><li><p><span>合金</span><sup class='md-footnote'><a href='#dfref-footnote-5' name='ref-footnote-5'>5</a></sup><span>：提供 5 经验值，对应PVE数值 + 1 ~ 2 。</span></p><ul><li><span>入手：涡</span></li><li><span>建议省着点用，主要是强攻合金不好来（死兽难打）以及 1 颗合金有几率提升 2 点PVE数值。</span></li></ul></li><li><p><span>魔材</span><sup class='md-footnote'><a href='#dfref-footnote-6' name='ref-footnote-6'>6</a></sup><span>：提供 10 经验值，对应通用数值 - 1 且另外三项随机一项 + 1 。</span></p><ul><li><span>入手：涡</span></li><li><font color=red><span>主要经验来源，因为能轻松从涡BOSS妖精</span><sup class='md-footnote'><a href='#dfref-footnote-7' name='ref-footnote-7'>7</a></sup><span>获得所有魔材。</span></font></li></ul></li><li><p><span>神圣素材</span><sup class='md-footnote'><a href='#dfref-footnote-8' name='ref-footnote-8'>8</a></sup><span>：提供 5 经验值，对应通用数值 + 1，不能超过第一行合计值上限。</span></p><ul><li><span>入手：活动限定</span></li><li><span>一次活动给 2 ~ 4 个。</span></li></ul></li><li><p><span>琉璃宝玉</span><sup class='md-footnote'><a href='#dfref-footnote-9' name='ref-footnote-9'>9</a></sup><span>：提供 5 经验值，通用数值合计值上限提升至 3 。</span></p><ul><li><span>入手：活动限定</span></li><li><span>一次活动给 1 个左右。</span></li></ul></li><li><p><span>妖精浮雕</span><sup class='md-footnote'><a href='#dfref-footnote-10' name='ref-footnote-10'>10</a></sup><span>：就是狗粮。分别提供 10 / 30 / 100 经验值。</span></p><ul><li><span>入手：活动限定</span></li></ul></li></ul><h4><a name="各素材对应数值" class="md-header-anchor"></a><span>各素材对应数值</span></h4><figure><table><thead><tr><th><span>近攻</span></th><th><span>远攻</span></th><th><span>近防</span></th><th><span>远防</span></th></tr></thead><tbody><tr><td><span>强攻合金</span></td><td><span>突击合金</span></td><td><span>强防合金</span></td><td><span>防护合金</span></td></tr><tr><td><span>魔之刀身</span></td><td><span>魔之弹头</span></td><td><span>魔之戒指</span></td><td><span>魔之手镯</span></td></tr><tr><td><span>神圣刀身</span></td><td><span>神圣弹头</span></td><td><span>神圣戒指</span></td><td><span>神圣手镯</span></td></tr></tbody></table></figure><p>&nbsp;</p><h2><a name="专用强化武器4专注1）" class="md-header-anchor"></a><span>专用强化武器（4专</span><sup class='md-footnote'><a href='#dfref-footnote-11' name='ref-footnote-11'>11</a></sup><span>）</span></h2><p><img src="img/4专_梅丽.png" referrerpolicy="no-referrer" alt="梅丽4专"></p><ul><li><span>只有特定角色的L卡和R卡可以装备，</span><font color=red><span>复活卡不能装备</span></font><span>。</span></li><li><span>通用数值与通武相同。</span></li><li><span>PVE数值额外各增加5点，即最大为4项各25。</span></li><li><font color=red><span>附带角色</span><a href='#span-name专属被动技能-id专属被动技能专属被动技能span'><span>专属被动技能</span></a><span>：增强特定技能。</span></font></li></ul><p><em><span>各角色的4专外观和名称都不同</span></em></p><p>&nbsp;</p><h3><a name="制作方法-n13962" class="md-header-anchor"></a><span>制作方法</span></h3><ul><li><span>Lv5以上的强化武器添加纹章</span><sup class='md-footnote'><a href='#dfref-footnote-12' name='ref-footnote-12'>12</a></sup><span>进行合成。</span></li></ul><p><font color=red><span>无法退回通武。</span></font></p><p><span>将会获得纹章对应角色列表中随机一个角色的4专。（</span><a href='#span-name角色对应纹章-id角色对应纹章角色对应纹章span'><span>角色对应纹章</span></a><span>）</span></p><p><span>继续与纹章合成则可以重新随机，不会随机到与现在相同的4专。</span></p><p><span>纹章提供 5 经验值。</span></p><p>&nbsp;</p><h1><a name="全4专资料及卡面httpswatwikijpunlight-fbtwpages463html" class="md-header-anchor"></a><a href='https://w.atwiki.jp/unlight-fbtw/pages/463.html'><span>全4专资料及卡面</span></a></h1><p>&nbsp;</p><h1><a name="span-name角色对应纹章-id角色对应纹章角色对应纹章span" class="md-header-anchor"></a><span name="角色对应纹章" id="角色对应纹章"><span>角色对应纹章</span></span></h1><p><span>数据来源：</span><a href='https://docs.google.com/spreadsheets/d/1phgI6irSkC_u8pzJ5YBUHMCCbEPTniH6rpfVGDoYtoE/edit#gid=684686558'><span>Google表格</span></a></p><h2><a name="按角色" class="md-header-anchor"></a><span>按角色</span></h2><figure><table><thead><tr><th><span>角色</span></th><th><span>纹章1</span></th><th><span>纹章2</span></th><th><span>纹章3</span></th></tr></thead><tbody><tr><td><span>艾伯李斯特</span></td><td><span>戰神</span></td><td><span>神樹</span></td><td>&nbsp;</td></tr><tr><td><span>艾依查庫</span></td><td><span>戰神</span></td><td><span>神樹</span></td><td>&nbsp;</td></tr><tr><td><span>古魯瓦爾多</span></td><td><span>戰神</span></td><td><span>豐收</span></td><td>&nbsp;</td></tr><tr><td><span>阿貝爾</span></td><td><span>戰神</span></td><td><span>豐收</span></td><td>&nbsp;</td></tr><tr><td><span>利恩</span></td><td><span>戰神</span></td><td><span>豐收</span></td><td>&nbsp;</td></tr><tr><td><span>庫勒尼西</span></td><td><span>戰神</span></td><td><span>豐收</span></td><td>&nbsp;</td></tr><tr><td><span>傑多</span></td><td><span>戰神</span></td><td><span>豐收</span></td><td>&nbsp;</td></tr><tr><td><span>阿奇波爾多</span></td><td><span>戰神</span></td><td><span>神樹</span></td><td>&nbsp;</td></tr><tr><td><span>馬庫斯</span></td><td><span>戰神</span></td><td><span>神樹</span></td><td>&nbsp;</td></tr><tr><td><span>布列依斯</span></td><td><span>戰神</span></td><td><span>神樹</span></td><td>&nbsp;</td></tr><tr><td><span>雪莉</span></td><td><span>美神</span></td><td><span>豐收</span></td><td>&nbsp;</td></tr><tr><td><span>艾茵</span></td><td><span>美神</span></td><td><span>豐收</span></td><td>&nbsp;</td></tr><tr><td><span>伯恩哈德</span></td><td><span>戰神</span></td><td><span>神樹</span></td><td>&nbsp;</td></tr><tr><td><span>弗雷特里西</span></td><td><span>戰神</span></td><td><span>神樹</span></td><td>&nbsp;</td></tr><tr><td><span>瑪格莉特</span></td><td><span>美神</span></td><td><span>豐收</span></td><td>&nbsp;</td></tr><tr><td><span>多妮妲</span></td><td><span>美神</span></td><td><span>豐收</span></td><td>&nbsp;</td></tr><tr><td><span>史普拉多</span></td><td><span>戰神</span></td><td><span>美神</span></td><td><span>豐收</span></td></tr><tr><td><span>貝琳達</span></td><td><span>美神</span></td><td><span>神樹</span></td><td>&nbsp;</td></tr><tr><td><span>羅索</span></td><td><span>戰神</span></td><td><span>神樹</span></td><td>&nbsp;</td></tr><tr><td><span>艾妲</span></td><td><span>美神</span></td><td><span>豐收</span></td><td>&nbsp;</td></tr><tr><td><span>梅倫</span></td><td><span>戰神</span></td><td><span>豐收</span></td><td>&nbsp;</td></tr><tr><td><span>薩爾卡多</span></td><td><span>戰神</span></td><td><span>神樹</span></td><td>&nbsp;</td></tr><tr><td><span>蕾格烈芙</span></td><td><span>美神</span></td><td><span>豐收</span></td><td>&nbsp;</td></tr><tr><td><span>里斯</span></td><td><span>戰神</span></td><td><span>豐收</span></td><td>&nbsp;</td></tr><tr><td><span>米利安</span></td><td><span>戰神</span></td><td><span>神樹</span></td><td>&nbsp;</td></tr><tr><td><span>沃肯</span></td><td><span>戰神</span></td><td><span>神樹</span></td><td>&nbsp;</td></tr><tr><td><span>佛羅倫斯</span></td><td><span>美神</span></td><td><span>豐收</span></td><td>&nbsp;</td></tr><tr><td><span>帕茉</span></td><td><span>美神</span></td><td><span>豐收</span></td><td>&nbsp;</td></tr><tr><td><span>阿修羅</span></td><td><span>戰神</span></td><td><span>豐收</span></td><td>&nbsp;</td></tr><tr><td><span>布朗寧</span></td><td><span>戰神</span></td><td><span>神樹</span></td><td>&nbsp;</td></tr><tr><td><span>瑪爾瑟斯</span></td><td><span>戰神</span></td><td><span>美神</span></td><td><span>神樹</span></td></tr><tr><td><span>路德</span></td><td><span>戰神</span></td><td><span>豐收</span></td><td>&nbsp;</td></tr><tr><td><span>魯卡</span></td><td><span>戰神</span></td><td><span>神樹</span></td><td>&nbsp;</td></tr><tr><td><span>史塔夏</span></td><td><span>美神</span></td><td><span>豐收</span></td><td>&nbsp;</td></tr><tr><td><span>沃蘭德</span></td><td><span>戰神</span></td><td><span>豐收</span></td><td>&nbsp;</td></tr><tr><td><span>C.C.</span></td><td><span>美神</span></td><td><span>神樹</span></td><td>&nbsp;</td></tr><tr><td><span>柯布</span></td><td><span>戰神</span></td><td><span>神樹</span></td><td>&nbsp;</td></tr><tr><td><span>伊芙琳</span></td><td><span>美神</span></td><td><span>豐收</span></td><td>&nbsp;</td></tr><tr><td><span>布勞</span></td><td><span>戰神</span></td><td><span>豐收</span></td><td>&nbsp;</td></tr><tr><td><span>凱倫貝克</span></td><td><span>戰神</span></td><td><span>神樹</span></td><td>&nbsp;</td></tr><tr><td><span>音音夢</span></td><td><span>美神</span></td><td><span>豐收</span></td><td>&nbsp;</td></tr><tr><td><span>康拉德</span></td><td><span>戰神</span></td><td><span>神樹</span></td><td>&nbsp;</td></tr><tr><td><span>碧姬媞</span></td><td><span>美神</span></td><td><span>神樹</span></td><td>&nbsp;</td></tr><tr><td><span>庫恩</span></td><td><span>戰神</span></td><td><span>神樹</span></td><td>&nbsp;</td></tr><tr><td><span>夏洛特</span></td><td><span>美神</span></td><td><span>豐收</span></td><td>&nbsp;</td></tr><tr><td><span>泰瑞爾</span></td><td><span>戰神</span></td><td><span>神樹</span></td><td>&nbsp;</td></tr><tr><td><span>露緹亞</span></td><td><span>美神</span></td><td><span>豐收</span></td><td>&nbsp;</td></tr><tr><td><span>威廉</span></td><td><span>戰神</span></td><td><span>神樹</span></td><td>&nbsp;</td></tr><tr><td><span>梅莉</span></td><td><span>美神</span></td><td><span>豐收</span></td><td>&nbsp;</td></tr><tr><td><span>古斯塔夫</span></td><td><span>戰神</span></td><td><span>神樹</span></td><td>&nbsp;</td></tr><tr><td><span>尤莉卡</span></td><td><span>美神</span></td><td><span>神樹</span></td><td>&nbsp;</td></tr><tr><td><span>林奈烏斯</span></td><td><span>戰神</span></td><td><span>神樹</span></td><td>&nbsp;</td></tr><tr><td><span>娜汀</span></td><td><span>美神</span></td><td><span>神樹</span></td><td>&nbsp;</td></tr><tr><td><span>迪諾</span></td><td><span>戰神</span></td><td><span>神樹</span></td><td>&nbsp;</td></tr><tr><td><span>奧蘭(黑白、棕)</span></td><td><span>戰神</span></td><td><span>豐收</span></td><td>&nbsp;</td></tr><tr><td><span>諾伊庫洛姆</span></td><td><span>美神</span></td><td><span>神樹</span></td><td>&nbsp;</td></tr><tr><td><span>出葉</span></td><td><span>戰神</span></td><td><span>神樹</span></td><td>&nbsp;</td></tr><tr><td><span>希拉莉</span></td><td><span>美神</span></td><td><span>豐收</span></td><td>&nbsp;</td></tr><tr><td><span>克洛維斯</span></td><td><span>戰神</span></td><td><span>神樹</span></td><td>&nbsp;</td></tr><tr><td><span>艾莉絲泰莉雅</span></td><td><span>美神</span></td><td><span>神樹</span></td><td>&nbsp;</td></tr><tr><td><span>雨果</span></td><td><span>戰神</span></td><td><span>神樹</span></td><td>&nbsp;</td></tr><tr><td><span>艾莉亞娜</span></td><td><span>美神</span></td><td><span>神樹</span></td><td>&nbsp;</td></tr><tr><td><span>格雷高爾</span></td><td><span>戰神</span></td><td><span>豐收</span></td><td>&nbsp;</td></tr><tr><td><span>蕾塔</span></td><td><span>美神</span></td><td><span>豐收</span></td><td>&nbsp;</td></tr><tr><td><span>伊普西隆</span></td><td><span>戰神</span></td><td><span>神樹</span></td><td>&nbsp;</td></tr><tr><td><span>波蕾特</span></td><td><span>美神</span></td><td><span>豐收</span></td><td>&nbsp;</td></tr><tr><td><span>尤哈尼</span></td><td><span>戰神</span></td><td><span>神樹</span></td><td>&nbsp;</td></tr><tr><td><span>諾艾菈</span></td><td><span>美神</span></td><td><span>神樹</span></td><td>&nbsp;</td></tr><tr><td><span>勞爾</span></td><td><span>戰神</span></td><td><span>豐收</span></td><td>&nbsp;</td></tr><tr><td><span>潔米</span></td><td><span>美神</span></td><td><span>豐收</span></td><td>&nbsp;</td></tr><tr><td><span>瑟法斯</span></td><td><span>戰神</span></td><td><span>豐收</span></td><td>&nbsp;</td></tr><tr><td><span>維若妮卡</span></td><td><span>美神</span></td><td><span>神樹</span></td><td>&nbsp;</td></tr><tr><td><span>里卡多</span></td><td><span>戰神</span></td><td><span>豐收</span></td><td>&nbsp;</td></tr><tr><td><span>瑪麗妮菈</span></td><td><span>美神</span></td><td><span>豐收</span></td><td>&nbsp;</td></tr><tr><td><span>摩根</span></td><td><span>戰神</span></td><td><span>神樹</span></td><td>&nbsp;</td></tr><tr><td><span>茱蒂絲</span></td><td><span>美神</span></td><td><span>神樹</span></td><td>&nbsp;</td></tr></tbody></table></figure><h2><a name="按纹章" class="md-header-anchor"></a><span>按纹章</span></h2><figure><table><thead><tr><th><span>戰神</span></th><th><span>美神</span></th><th><span>神樹</span></th><th><span>豐收</span></th><th><span>戰神+神樹</span></th><th><span>戰神+豐收</span></th><th><span>美神+神樹</span></th><th><span>美神+豐收</span></th><th><span>戰神+美神</span></th></tr></thead><tbody><tr><td><span>艾伯李斯特</span></td><td><span>雪莉</span></td><td><span>艾伯李斯特</span></td><td><span>古魯瓦爾多</span></td><td><span>艾伯李斯特</span></td><td><span>古魯瓦爾多</span></td><td><span>雪莉</span></td><td><span>貝琳達</span></td><td><span>史普拉多</span></td></tr><tr><td><span>艾依查庫</span></td><td><span>艾茵</span></td><td><span>艾依查庫</span></td><td><span>阿貝爾</span></td><td><span>艾依查庫</span></td><td><span>阿貝爾</span></td><td><span>艾茵</span></td><td><span>瑪爾瑟斯</span></td><td><span>瑪爾瑟斯</span></td></tr><tr><td><span>古魯瓦爾多</span></td><td><span>瑪格莉特</span></td><td><span>阿奇波爾多</span></td><td><span>利恩</span></td><td><span>阿奇波爾多</span></td><td><span>利恩</span></td><td><span>瑪格莉特</span></td><td><span>C.C.</span></td><td>&nbsp;</td></tr><tr><td><span>阿貝爾</span></td><td><span>多妮妲</span></td><td><span>馬庫斯</span></td><td><span>庫勒尼西</span></td><td><span>馬庫斯</span></td><td><span>庫勒尼西</span></td><td><span>多妮妲</span></td><td><span>碧姬媞</span></td><td>&nbsp;</td></tr><tr><td><span>利恩</span></td><td><span>史普拉多</span></td><td><span>布列依斯</span></td><td><span>傑多</span></td><td><span>布列依斯</span></td><td><span>傑多</span></td><td><span>史普拉多</span></td><td><span>尤莉卡</span></td><td>&nbsp;</td></tr><tr><td><span>庫勒尼西</span></td><td><span>貝琳達</span></td><td><span>伯恩哈德</span></td><td><span>雪莉</span></td><td><span>伯恩哈德</span></td><td><span>史普拉多</span></td><td><span>艾妲</span></td><td><span>娜汀</span></td><td>&nbsp;</td></tr><tr><td><span>傑多</span></td><td><span>艾妲</span></td><td><span>弗雷特里西</span></td><td><span>艾茵</span></td><td><span>弗雷特里西</span></td><td><span>梅倫</span></td><td><span>蕾格烈芙</span></td><td><span>諾伊庫洛姆</span></td><td>&nbsp;</td></tr><tr><td><span>阿奇波爾多</span></td><td><span>蕾格烈芙</span></td><td><span>貝琳達</span></td><td><span>瑪格莉特</span></td><td><span>羅索</span></td><td><span>里斯</span></td><td><span>佛羅倫斯</span></td><td><span>艾莉絲泰莉雅</span></td><td>&nbsp;</td></tr><tr><td><span>馬庫斯</span></td><td><span>佛羅倫斯</span></td><td><span>羅索</span></td><td><span>多妮妲</span></td><td><span>薩爾卡多</span></td><td><span>阿修羅</span></td><td><span>帕茉</span></td><td><span>艾莉亞娜</span></td><td>&nbsp;</td></tr><tr><td><span>布列依斯</span></td><td><span>帕茉</span></td><td><span>薩爾卡多</span></td><td><span>史普拉多</span></td><td><span>米利安</span></td><td><span>路德</span></td><td><span>史塔夏</span></td><td><span>諾艾菈</span></td><td>&nbsp;</td></tr><tr><td><span>伯恩哈德</span></td><td><span>瑪爾瑟斯</span></td><td><span>米利安</span></td><td><span>艾妲</span></td><td><span>沃肯</span></td><td><span>沃蘭德</span></td><td><span>伊芙琳</span></td><td><span>維若妮卡</span></td><td>&nbsp;</td></tr><tr><td><span>弗雷特里西</span></td><td><span>史塔夏</span></td><td><span>沃肯</span></td><td><span>梅倫</span></td><td><span>布朗寧</span></td><td><span>布勞</span></td><td><span>音音夢</span></td><td><span>茱蒂絲</span></td><td>&nbsp;</td></tr><tr><td><span>史普拉多</span></td><td><span>C.C.</span></td><td><span>布朗寧</span></td><td><span>蕾格烈芙</span></td><td><span>瑪爾瑟斯</span></td><td><span>奧蘭(黑白、棕)</span></td><td><span>夏洛特</span></td><td>&nbsp;</td><td>&nbsp;</td></tr><tr><td><span>羅索</span></td><td><span>伊芙琳</span></td><td><span>瑪爾瑟斯</span></td><td><span>里斯</span></td><td><span>魯卡</span></td><td><span>格雷高爾</span></td><td><span>露緹亞</span></td><td>&nbsp;</td><td>&nbsp;</td></tr><tr><td><span>梅倫</span></td><td><span>音音夢</span></td><td><span>魯卡</span></td><td><span>佛羅倫斯</span></td><td><span>柯布</span></td><td><span>勞爾</span></td><td><span>梅莉</span></td><td>&nbsp;</td><td>&nbsp;</td></tr><tr><td><span>薩爾卡多</span></td><td><span>碧姬媞</span></td><td><span>C.C.</span></td><td><span>帕茉</span></td><td><span>凱倫貝克</span></td><td><span>瑟法斯</span></td><td><span>希拉莉</span></td><td>&nbsp;</td><td>&nbsp;</td></tr><tr><td><span>里斯</span></td><td><span>夏洛特</span></td><td><span>柯布</span></td><td><span>阿修羅</span></td><td><span>康拉德</span></td><td><span>里卡多</span></td><td><span>蕾塔</span></td><td>&nbsp;</td><td>&nbsp;</td></tr><tr><td><span>米利安</span></td><td><span>露緹亞</span></td><td><span>凱倫貝克</span></td><td><span>路德</span></td><td><span>庫恩</span></td><td>&nbsp;</td><td><span>波蕾特</span></td><td>&nbsp;</td><td>&nbsp;</td></tr><tr><td><span>沃肯</span></td><td><span>梅莉</span></td><td><span>康拉德</span></td><td><span>史塔夏</span></td><td><span>泰瑞爾</span></td><td>&nbsp;</td><td><span>潔咪</span></td><td>&nbsp;</td><td>&nbsp;</td></tr><tr><td><span>阿修羅</span></td><td><span>尤莉卡</span></td><td><span>碧姬媞</span></td><td><span>沃蘭德</span></td><td><span>威廉</span></td><td>&nbsp;</td><td><span>瑪麗妮菈</span></td><td>&nbsp;</td><td>&nbsp;</td></tr><tr><td><span>布朗寧</span></td><td><span>娜汀</span></td><td><span>庫恩</span></td><td><span>伊芙琳</span></td><td><span>古斯塔夫</span></td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr><tr><td><span>瑪爾瑟斯</span></td><td><span>諾伊庫洛姆</span></td><td><span>泰瑞爾</span></td><td><span>布勞</span></td><td><span>林奈烏斯</span></td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr><tr><td><span>路德</span></td><td><span>希拉莉</span></td><td><span>威廉</span></td><td><span>音音夢</span></td><td><span>迪諾</span></td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr><tr><td><span>魯卡</span></td><td><span>艾莉絲泰莉雅</span></td><td><span>古斯塔夫</span></td><td><span>夏洛特</span></td><td><span>出葉</span></td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr><tr><td><span>沃蘭德</span></td><td><span>艾莉亞娜</span></td><td><span>尤莉卡</span></td><td><span>露緹亞</span></td><td><span>克洛維斯</span></td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr><tr><td><span>柯布</span></td><td><span>蕾塔</span></td><td><span>林奈烏斯</span></td><td><span>梅莉</span></td><td><span>雨果</span></td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr><tr><td><span>布勞</span></td><td><span>波蕾特</span></td><td><span>娜汀</span></td><td><span>奧蘭(黑白、棕)</span></td><td><span>伊普西隆</span></td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr><tr><td><span>凱倫貝克</span></td><td><span>諾艾菈</span></td><td><span>迪諾</span></td><td><span>希拉莉</span></td><td><span>尤哈尼</span></td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr><tr><td><span>康拉德</span></td><td><span>潔米</span></td><td><span>諾伊庫洛姆</span></td><td><span>格雷高爾</span></td><td><span>摩根</span></td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr><tr><td><span>庫恩</span></td><td><span>維若妮卡</span></td><td><span>出葉</span></td><td><span>蕾塔</span></td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr><tr><td><span>泰瑞爾</span></td><td><span>瑪麗妮菈</span></td><td><span>克洛維斯</span></td><td><span>波蕾特</span></td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr><tr><td><span>威廉</span></td><td><span>茱蒂絲</span></td><td><span>艾莉絲泰莉雅</span></td><td><span>勞爾</span></td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr><tr><td><span>古斯塔夫</span></td><td>&nbsp;</td><td><span>雨果</span></td><td><span>潔米</span></td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr><tr><td><span>林奈烏斯</span></td><td>&nbsp;</td><td><span>艾莉亞娜</span></td><td><span>瑟法斯</span></td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr><tr><td><span>迪諾</span></td><td>&nbsp;</td><td><span>伊普西隆</span></td><td><span>里卡多</span></td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr><tr><td><span>奧蘭(黑白、棕)</span></td><td>&nbsp;</td><td><span>尤哈尼</span></td><td><span>瑪麗妮菈</span></td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr><tr><td><span>出葉</span></td><td>&nbsp;</td><td><span>諾艾菈</span></td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr><tr><td><span>克洛維斯</span></td><td>&nbsp;</td><td><span>維若妮卡</span></td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr><tr><td><span>雨果</span></td><td>&nbsp;</td><td><span>摩根</span></td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr><tr><td><span>格雷高爾</span></td><td>&nbsp;</td><td><span>茱蒂絲</span></td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr><tr><td><span>伊普西隆</span></td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr><tr><td><span>尤哈尼</span></td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr><tr><td><span>勞爾</span></td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr><tr><td><span>瑟法斯</span></td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr><tr><td><span>里卡多</span></td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr><tr><td><span>摩根</span></td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr></tbody></table></figure><p>&nbsp;</p><h1><a name="span-name专属被动技能-id专属被动技能专属被动技能span" class="md-header-anchor"></a><span name="专属被动技能" id="专属被动技能"><span>专属被动技能</span></span></h1><p><span>数据来源：</span><a href='https://docs.google.com/spreadsheets/d/1phgI6irSkC_u8pzJ5YBUHMCCbEPTniH6rpfVGDoYtoE/edit#gid=1031079813'><span>Google表格</span></a></p><p><span>大多是缓和发动条件（发动需求卡牌数值 - 1，不会导致低于 1）。</span></p><p><span>本表格未更新Open Unlight平衡调整后的数据。</span></p><figure><table><thead><tr><th><span>角色</span></th><th><span>技能</span></th><th><span>原条件</span></th><th><span>强化</span></th><th><span>原条件(Ex)</span></th><th><span>强化(Ex)</span></th></tr></thead><tbody><tr><td><span>艾伯李斯特</span></td><td><span>茨林 +</span></td><td><span>特2↑ , 防2↑</span></td><td><span>特1↑ , 防1↑</span></td><td><span>特3↑ , 防3↑</span></td><td><span>特2↑ , 防2↑</span></td></tr><tr><td><span>艾依查庫</span></td><td><span>憤怒一擊 +</span></td><td><span>特3↑</span></td><td><span>特2↑</span></td><td><span>特3↑</span></td><td><span>特2↑</span></td></tr><tr><td><span>古魯瓦爾多</span></td><td><span>血之恩賜 +</span></td><td><span>特2↑ , 防3↑</span></td><td><span>特1↑ , 防2↑</span></td><td><span>特2↑ , 防5↑</span></td><td><span>特1↑ , 防4↑</span></td></tr><tr><td><span>阿貝爾</span></td><td><span>霸王閃擊 +</span></td><td><span>劍3↑</span></td><td><span>劍2↑</span></td><td><span>劍6↑</span></td><td><span>劍5↑</span></td></tr><tr><td><span>利恩</span></td><td><span>毒牙 +</span></td><td><span>劍3↑ , 特3↑</span></td><td><span>劍2↑ , 特2↑</span></td><td><span>劍5↑ , 特3↑</span></td><td><span>劍4↑ , 特2↑</span></td></tr><tr><td><span>庫勒尼西</span></td><td><span>深淵 +</span></td><td><span>特3↑</span></td><td><span>特2↑</span></td><td><span>特3↑</span></td><td><span>特2↑</span></td></tr><tr><td><span>傑多</span></td><td><span>因果之輪 +</span></td><td><span>特2↑</span></td><td><span>特1↑</span></td><td><span>特4↑</span></td><td><span>特3↑</span></td></tr><tr><td><span>阿奇波爾多</span></td><td><span>致命槍擊 +</span></td><td><span>槍1= , 槍2= , 槍3=</span></td><td><span>槍1= , 槍1= , 槍2=</span></td><td><span>槍7↑</span></td><td><span>槍6↑</span></td></tr><tr><td><span>馬庫斯</span></td><td><span>解放 +</span></td><td><span>特4↑</span></td><td><span>特3↑</span></td><td><span>特4↑</span></td><td><span>特3↑</span></td></tr><tr><td><span>布列依斯</span></td><td><span>封印枷鎖 +</span></td><td><span>劍3↑ , 特3↑</span></td><td><span>劍2↑ , 特2↑</span></td><td><span>劍5↑ , 特3↑</span></td><td><span>劍4↑ , 特2↑</span></td></tr><tr><td><span>雪莉</span></td><td><span>異質者 +</span></td><td><span>特=3</span></td><td><span>特2=</span></td><td><span>特3↑</span></td><td><span>特2↑</span></td></tr><tr><td><span>艾茵</span></td><td><span>一顆心 +</span></td><td><span>特3= ⇒特3↑</span></td><td><span>特2= ⇒特2↑</span></td><td><span>特3↑</span></td><td><span>特2↑</span></td></tr><tr><td><span>伯恩哈德</span></td><td><span>解放劍 +</span></td><td><span>劍4↑</span></td><td><span>劍3↑</span></td><td><span>劍5↑</span></td><td><span>劍4↑</span></td></tr><tr><td><span>弗雷特里西</span></td><td><span>百閃 +</span></td><td><span>劍6↑ , 槍=0 , 移=0</span></td><td><span>劍5↑ , 槍=0 , 移=0</span></td><td><span>劍8↑ , 槍=0 , 移=0</span></td><td><span>劍7↑ , 槍=0 , 移=0</span></td></tr><tr><td><span>瑪格莉特</span></td><td><span>恍惚 +</span></td><td><span>防3↑ , 移1↑</span></td><td><span>防2↑ , 移1↑</span></td><td><span>防3↑ , 移1↑</span></td><td><span>防2↑ , 移1↑</span></td></tr><tr><td><span>多妮妲</span></td><td><span>異質者 +</span></td><td><span>特=3</span></td><td><span>特2=</span></td><td><span>特3↑</span></td><td><span>特2↑</span></td></tr><tr><td><span>史普拉多</span></td><td><span>貪食者 +</span></td><td><span>劍4↑移1↑</span></td><td><span>劍3↑移1↑</span></td><td><span>劍5↑移1↑</span></td><td><span>劍4↑移1↑</span></td></tr><tr><td><span>貝琳達</span></td><td><span>裂地冰牙 +</span></td><td><span>槍4↑ , 特1↑</span></td><td><span>槍3↑ , 特1↑</span></td><td><span>槍4↑ , 特1↑</span></td><td><span>槍3↑ , 特1↑</span></td></tr><tr><td><span>羅索</span></td><td><span>時空分斷刀 +</span></td><td><span>劍6↑</span></td><td><span>劍5↑</span></td><td><span>劍6↑</span></td><td><span>劍5↑</span></td></tr><tr><td><span>艾妲</span></td><td><span>機槍掃射 +</span></td><td><span>槍3↑⇒槍4↑</span></td><td><span>槍2↑⇒槍3↑</span></td><td><span>槍5↑</span></td><td><span>槍4↑</span></td></tr><tr><td><span>梅倫</span></td><td><span>Lowball +</span></td><td><span>劍1↑ , 槍1↑ , 特1↑ , 防1↑ , 移1↑</span></td><td><span>劍1↑ , 槍1↑ , 特1↑ , 移1↑</span></td><td><span>劍1↑ , 槍1↑ , 特1↑ , 防1↑ , 移1↑</span></td><td><span>劍1↑ , 槍1↑ , 特1↑ , 移1↑</span></td></tr><tr><td><span>薩爾卡多</span></td><td><span>迴飛踢 +</span></td><td><span>劍3↑ , 槍3↑</span></td><td><span>劍2↑ , 槍2↑</span></td><td><span>劍3↑ , 槍3↑</span></td><td><span>劍2↑ , 槍2↑</span></td></tr><tr><td><span>蕾格烈芙</span></td><td><span>C.T.L +</span></td><td><span>槍4↑ , 特1↑</span></td><td><span>槍3↑ , 特1↑</span></td><td><span>槍6↑ , 特1↑</span></td><td><span>槍5↑ , 特1↑</span></td></tr><tr><td><span>里斯</span></td><td><span>煉獄 +</span></td><td><span>劍5↑ , 特2↑</span></td><td><span>劍4↑ , 特1↑</span></td><td><span>劍6↑ , 特2↑</span></td><td><span>劍5↑ , 特1↑</span></td></tr><tr><td><span>米利安</span></td><td><span>漆黑迅雷 +</span></td><td><span>槍4↑ , 特1↑</span></td><td><span>槍3↑ , 特1↑</span></td><td><span>槍5↑ , 特1↑</span></td><td><span>槍4↑ , 特1↑</span></td></tr><tr><td><span>沃肯</span></td><td><span>自我解剖 +</span></td><td><span>特2↑</span></td><td><span>特1↑</span></td><td><span>特3↑</span></td><td><span>特2↑</span></td></tr><tr><td><span>佛羅倫斯</span></td><td><span>戰鬥巨斧 +</span></td><td><span>劍5↑</span></td><td><span>劍4↑</span></td><td><span>劍6↑</span></td><td><span>劍5↑</span></td></tr><tr><td><span>帕茉</span></td><td><span>慈悲的藍眼 +</span></td><td><span>劍7↑ ⇒劍6↑</span></td><td><span>劍6↑ ⇒劍5↑</span></td><td><span>劍5↑</span></td><td><span>劍4↑</span></td></tr><tr><td><span>阿修羅</span></td><td><span>葉隱術 +</span></td><td><span>特2↑ , 防2↑</span></td><td><span>特1↑ , 防1↑</span></td><td><span>特2↑ , 防2↑</span></td><td><span>特1↑ , 防1↑</span></td></tr><tr><td><span>布朗寧</span></td><td><span>羅德西亞之海 +</span></td><td><span>特2↑ , 防3↑</span></td><td><span>特1↑ , 防2↑</span></td><td><span>特2↑ , 防3↑</span></td><td><span>特1↑ , 防2↑</span></td></tr><tr><td><span>瑪爾瑟斯</span></td><td><span>蒼藍薔薇 +</span></td><td><span>劍6↑ , 防5↑ ⇒劍5↑ , 防5↑</span></td><td><span>劍5↑ , 防4↑ ⇒劍4↑ , 防4↑</span></td><td><span>劍5↑ , 防4↑</span></td><td><span>劍4↑ , 防3↑</span></td></tr><tr><td><span>路德</span></td><td><span>洋地黃 +</span></td><td><span>劍3↑ , 槍3↑</span></td><td><span>劍2↑ , 槍2↑</span></td><td><span>劍3↑ , 槍3↑</span></td><td><span>劍2↑ , 槍2↑</span></td></tr><tr><td><span>魯卡</span></td><td><span>八葉 +</span></td><td><span>特2↑</span></td><td><span>特1↑</span></td><td><span>特2↑</span></td><td><span>特1↑</span></td></tr><tr><td><span>史塔夏</span></td><td><span>愚者之手 +</span></td><td><span>劍5↑ ⇒劍6↑</span></td><td><span>劍4↑ ⇒劍5↑</span></td><td><span>劍6↑</span></td><td><span>劍5↑</span></td></tr><tr><td><span>沃蘭德</span></td><td><span>『審判』 +</span></td><td><span>防2↑ , 特2↑</span></td><td><span>防1↑ , 特1↑</span></td><td><span>防3↑ , 特2↑</span></td><td><span>防2↑ , 特1↑</span></td></tr><tr><td><span>C.C.</span></td><td><span>白銀戰機 +</span></td><td><span>劍2↑ , 槍2↑</span></td><td><span>劍1↑ , 槍1↑</span></td><td><span>劍3↑ , 槍3↑</span></td><td><span>劍2↑ , 槍2↑</span></td></tr><tr><td><span>柯布</span></td><td><span>異空僵局 +</span></td><td><span>防3↑ , 移1↑</span></td><td><span>防2↑ , 移1↑</span></td><td><span>防4↑ , 移1↑</span></td><td><span>防3↑ , 移1↑</span></td></tr><tr><td><span>伊芙琳</span></td><td><span>慟哭之歌 +</span></td><td><span>特1↑ , 防3↑</span></td><td><span>特1↑ , 防2↑</span></td><td><span>特1↑ , 防3↑</span></td><td><span>特1↑ , 防2↑</span></td></tr><tr><td><span>布勞</span></td><td><span>時間爆彈 +</span></td><td><span>劍3↑ , 槍3↑</span></td><td><span>劍2↑ , 槍2↑</span></td><td>&nbsp;</td><td>&nbsp;</td></tr><tr><td><span>凱倫貝克</span></td><td><span>自棄的奏鳴曲 +</span></td><td><span>特1↑ , 移1↑</span></td><td><span>特1↑</span></td><td><span>特1↑ , 移1↑</span></td><td><span>特1↑</span></td></tr><tr><td><span>音音夢</span></td><td><span>愉快抽血 +</span></td><td><span>特2↑</span></td><td><span>特1↑</span></td><td>&nbsp;</td><td>&nbsp;</td></tr><tr><td><span>康拉德</span></td><td><span>祝善之意 +</span></td><td><span>防2↑ , 移1↑</span></td><td><span>防1↑ , 移1↑</span></td><td>&nbsp;</td><td>&nbsp;</td></tr><tr><td><span>碧姬媞</span></td><td><span>轉生輪迴 +</span></td><td><span>劍3↑ , 槍3↑</span></td><td><span>劍2↑ , 槍2↑</span></td><td>&nbsp;</td><td>&nbsp;</td></tr><tr><td><span>庫恩</span></td><td><span>懶惰的呻吟 +</span></td><td><span>槍3↑ , 特1↑</span></td><td><span>槍2↑ , 特1↑</span></td><td><span>槍4↑ , 特1↑</span></td><td><span>槍3↑ , 特1↑</span></td></tr><tr><td><span>夏洛特</span></td><td><span>冬之夢 +</span></td><td><span>劍3↑ , 槍3↑</span></td><td><span>劍2↑ , 槍2↑</span></td><td><span>劍3↑ , 槍3↑</span></td><td><span>劍2↑ , 槍2↑</span></td></tr><tr><td><span>泰瑞爾</span></td><td><span>Rud-913 +</span></td><td><span>劍3↑ , 移1↑</span></td><td><span>劍2↑ , 移1↑</span></td><td><span>劍4↑ , 移1↑</span></td><td><span>劍3↑ , 移1↑</span></td></tr><tr><td><span>露緹亞</span></td><td><span>腐朽之靈 +</span></td><td><span>劍3↑</span></td><td><span>劍2↑</span></td><td><span>劍4↑</span></td><td><span>劍3↑</span></td></tr><tr><td><span>威廉</span></td><td><span>魂魄的奉禮 +</span></td><td><span>劍3↑ , 槍3↑ , 特2↑</span></td><td><span>劍2↑ , 槍2↑ , 特1↑</span></td><td>&nbsp;</td><td>&nbsp;</td></tr><tr><td><span>梅莉</span></td><td><span>夢幻魔杖 +</span></td><td><span>槍3↑</span></td><td><span>槍2↑</span></td><td><span>槍3↑</span></td><td><span>槍2↑</span></td></tr><tr><td><span>古斯塔夫</span></td><td><span>鮮明的邪光 +</span></td><td><span>劍3↑ , 槍1↑</span></td><td><span>劍2↑ , 槍1↑</span></td><td><span>劍4↑ , 槍1↑</span></td><td><span>劍3↑ , 槍1↑</span></td></tr><tr><td><span>尤莉卡</span></td><td><span>曲惡的安寧 +</span></td><td><span>特1↑ , 防3↑</span></td><td><span>特1↑ , 防2↑</span></td><td>&nbsp;</td><td>&nbsp;</td></tr><tr><td><span>林奈烏斯</span></td><td><span>蝶舞 +</span></td><td><span>移1↑ , [劍防槍]3↑</span></td><td><span>移1↑ , [劍防槍]2↑</span></td><td>&nbsp;</td><td>&nbsp;</td></tr><tr><td><span>娜汀</span></td><td><span>抱擁結界 +</span></td><td><span>特1↑ , 槍4↓ ⇒ 特1↑ , 槍5↓</span></td><td><span>特1↑ , 槍5↓ ⇒ 特1↑ , 槍6↓</span></td><td>&nbsp;</td><td>&nbsp;</td></tr><tr><td><span>迪諾</span></td><td><span>你是在看哪裡！ +</span></td><td><span>移=1 , 特=1</span></td><td><span>特=1</span></td><td>&nbsp;</td><td>&nbsp;</td></tr><tr><td><span>奧蘭</span></td><td><span>彈鋼琴 +</span></td><td><span>劍1↑ , 防3↑</span></td><td><span>劍1↑ , 防2↑</span></td><td>&nbsp;</td><td>&nbsp;</td></tr><tr><td><span>諾伊庫洛姆</span></td><td><span>萬物之杖 +</span></td><td><span>槍3↑ , 特4↓ ⇒ 槍3↑ , 特5↓</span></td><td><span>槍2↑ , 特5↓ ⇒ 槍2↑ , 特6↓</span></td><td>&nbsp;</td><td>&nbsp;</td></tr><tr><td><span>出葉</span></td><td><span>銳水流槍 +</span></td><td><span>槍3↑ , 移1↑</span></td><td><span>槍2↑ , 移1↑</span></td><td>&nbsp;</td><td>&nbsp;</td></tr><tr><td><span>希拉莉</span></td><td><span>報復回擊 +</span></td><td><span>劍3↑ , 槍2↑</span></td><td><span>劍2↑ , 槍1↑</span></td><td>&nbsp;</td><td>&nbsp;</td></tr><tr><td><span>克洛維斯</span></td><td><span>幻惑的一幕 +</span></td><td><span>防4↑ , 無1↑</span></td><td><span>防3↑ , 無1↑</span></td><td>&nbsp;</td><td>&nbsp;</td></tr><tr><td><span>艾莉絲泰莉雅</span></td><td><span>陷落常春藤 +</span></td><td><span>劍3↑ , 槍3↑</span></td><td><span>劍2↑ , 槍2↑</span></td><td>&nbsp;</td><td>&nbsp;</td></tr><tr><td><span>雨果</span></td><td><span>縫影 +</span></td><td><span>特2↑</span></td><td><span>特1↑</span></td><td>&nbsp;</td><td>&nbsp;</td></tr><tr><td><span>艾莉亞娜</span></td><td><span>恐懼的法則 +</span></td><td><span>特3↑</span></td><td><span>特2↑</span></td><td>&nbsp;</td><td>&nbsp;</td></tr><tr><td><span>格雷高爾</span></td><td><span>靈魂仿製 +</span></td><td><span>槍2↑ , 防2↑</span></td><td><span>槍1↑ , 防1↑</span></td><td>&nbsp;</td><td>&nbsp;</td></tr><tr><td><span>蕾塔</span></td><td><span>逆襲引力 +</span></td><td><span>防1↑ , 移2↑</span></td><td><span>防1↑ , 移1↑</span></td><td>&nbsp;</td><td>&nbsp;</td></tr><tr><td><span>伊普西隆</span></td><td><span>次元交錯 +</span></td><td><span>防3↑⇒防4↑</span></td><td><span>防2↑⇒防3↑</span></td><td>&nbsp;</td><td>&nbsp;</td></tr><tr><td><span>波蕾特</span></td><td><span>紫色狂躁 +</span></td><td><span>槍4↑ , 防2↑</span></td><td><span>槍3↑ , 防1↑</span></td><td>&nbsp;</td><td>&nbsp;</td></tr><tr><td><span>尤哈尼</span></td><td><span>拒絕餘光 +</span></td><td><span>劍2↑ , 槍2↑ , 防2↑</span></td><td><span>劍1↑ , 槍1↑ , 防1↑</span></td><td>&nbsp;</td><td>&nbsp;</td></tr><tr><td><span>諾艾菈</span></td><td><span>強襲彗星 +</span></td><td><span>槍=3</span></td><td><span>槍=2</span></td><td>&nbsp;</td><td>&nbsp;</td></tr><tr><td><span>勞爾</span></td><td><span>恐慌榴彈 +</span></td><td><span>槍3↑ , 移1↑</span></td><td><span>槍2↑ , 移1↑</span></td><td>&nbsp;</td><td>&nbsp;</td></tr><tr><td><span>潔米</span></td><td><span>瑪基斯托 +</span></td><td><span>槍3↑</span></td><td><span>槍2↑</span></td><td>&nbsp;</td><td>&nbsp;</td></tr><tr><td><span>瑟法斯</span></td><td><span>勇猛的儀式 +</span></td><td><span>劍4↑</span></td><td><span>劍3↑</span></td><td>&nbsp;</td><td>&nbsp;</td></tr><tr><td><span>維若妮卡</span></td><td><span>人偶幻視 +</span></td><td><span>防3↑ , 特2↑</span></td><td><span>防2↑ , 特1↑</span></td><td>&nbsp;</td><td>&nbsp;</td></tr><tr><td><span>里卡多</span></td><td><span>威勢 +</span></td><td><span>防4↑ ⇒防3↑</span></td><td><span>防3↑ ⇒防2↑</span></td><td>&nbsp;</td><td>&nbsp;</td></tr><tr><td><span>瑪麗妮菈</span></td><td><span>快速射擊 +</span></td><td><span>槍4↑</span></td><td><span>槍3↑</span></td><td>&nbsp;</td><td>&nbsp;</td></tr><tr><td><span>摩根</span></td><td><span>銳化篡奪 +</span></td><td><span>防3↑ , 移1↑</span></td><td><span>防2↑ , 移1↑</span></td><td>&nbsp;</td><td>&nbsp;</td></tr><tr><td><span>茱蒂絲</span></td><td><span>牲祭納一 +</span></td><td><span>防=2</span></td><td><span>防=1</span></td><td>&nbsp;</td><td>&nbsp;</td></tr></tbody></table></figure><p>&nbsp;</p><h1><a name="尾注注释黑话附图" class="md-header-anchor"></a><span>尾注：注释、黑话、附图</span></h1><div class='footnotes-area'  ><hr/>
+<div class='footnote-line'><span class='md-fn-count'>1</span> <img src="img/妖魔短剑.png" referrerpolicy="no-referrer" alt="妖魔短剑"> <a name='dfref-footnote-1' href='#ref-footnote-1' title='回到文档' class='reversefootnote' >↩</a></div>
+<div class='footnote-line'><span class='md-fn-count'>2</span> <img src="img/妖魔弹药.png" referrerpolicy="no-referrer" alt="妖魔弹药"> <a name='dfref-footnote-2' href='#ref-footnote-2' title='回到文档' class='reversefootnote' >↩</a></div>
+<div class='footnote-line'><span class='md-fn-count'>3</span> <img src="img/妖魔戒指.png" referrerpolicy="no-referrer" alt="妖魔戒指"> <a name='dfref-footnote-3' href='#ref-footnote-3' title='回到文档' class='reversefootnote' >↩</a></div>
+<div class='footnote-line'><span class='md-fn-count'>4</span> <img src="img/异矿.jpg" referrerpolicy="no-referrer" alt="异矿"> <a name='dfref-footnote-4' href='#ref-footnote-4' title='回到文档' class='reversefootnote' >↩</a></div>
+<div class='footnote-line'><span class='md-fn-count'>5</span> <img src="img/合金.jpg" referrerpolicy="no-referrer" alt="合金"> <a name='dfref-footnote-5' href='#ref-footnote-5' title='回到文档' class='reversefootnote' >↩</a></div>
+<div class='footnote-line'><span class='md-fn-count'>6</span> <img src="img/魔材.jpg" referrerpolicy="no-referrer" alt="魔材"> <a name='dfref-footnote-6' href='#ref-footnote-6' title='回到文档' class='reversefootnote' >↩</a></div>
+<div class='footnote-line'><span class='md-fn-count'>7</span> <img src="img/妖精.jpg" referrerpolicy="no-referrer" alt="妖精"> <a name='dfref-footnote-7' href='#ref-footnote-7' title='回到文档' class='reversefootnote' >↩</a></div>
+<div class='footnote-line'><span class='md-fn-count'>8</span> <img src="img/神圣素材.png" referrerpolicy="no-referrer" alt="神圣素材"> <a name='dfref-footnote-8' href='#ref-footnote-8' title='回到文档' class='reversefootnote' >↩</a></div>
+<div class='footnote-line'><span class='md-fn-count'>9</span> <img src="img/琉璃宝玉.jpg" referrerpolicy="no-referrer" alt="琉璃宝玉"> <a name='dfref-footnote-9' href='#ref-footnote-9' title='回到文档' class='reversefootnote' >↩</a></div>
+<div class='footnote-line'><span class='md-fn-count'>10</span> <img src="img/狗粮.png" referrerpolicy="no-referrer" alt="妖精浮雕"> <a name='dfref-footnote-10' href='#ref-footnote-10' title='回到文档' class='reversefootnote' >↩</a></div>
+<div class='footnote-line'><span class='md-fn-count'>11</span> <span>指角色的第四把专武。前三把分别是角色刚出时入手LV3赠送的、暗房抽的(冥印换的)、BP榜月结给的。</span> <a name='dfref-footnote-11' href='#ref-footnote-11' title='回到文档' class='reversefootnote' >↩</a></div>
+<div class='footnote-line'><span class='md-fn-count'>12</span> <img src="img/纹章.jpg" referrerpolicy="no-referrer" alt="纹章"> <a name='dfref-footnote-12' href='#ref-footnote-12' title='回到文档' class='reversefootnote' >↩</a></div></div></div>
+</body>
+</html>
