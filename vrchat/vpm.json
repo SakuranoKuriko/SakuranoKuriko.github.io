@@ -1,0 +1,52 @@
+{
+  "name": "SakuranoKuriko",
+  "author": "SakuranoKuriko",
+  "url": "https://sakuranokuriko.github.io/vrchat/vpm.json",
+  "id": "top.kuriko.vpm",
+  "packages": {
+    "top.kuriko.common": {
+      "versions": {
+        "0.1.1": {
+          "name": "top.kuriko.common",
+          "version": "0.1.1",
+          "displayName": "SakuranoKuriko's Common Libraries",
+          "description": "SakuranoKuriko's Common Libraries",
+          "author": {
+            "name": "SakuranoKuriko",
+            "email": "mao.liz.baka@gmail.com",
+            "url": "https://github.com/SakuranoKuriko"
+          },
+          "url" : "https://github.com/SakuranoKuriko/top.kuriko.common-unity/releases/download/v0.1.1/top.kuriko.common-v0.1.1-02aa43d.zip?",
+          "unity": "2022.3",
+          "repo": "https://sakuranokuriko.github.io/vrchat/vpm.json"
+        }
+      }
+    },
+    "top.kuriko.vrchat.avatar-parameter-binder": {
+      "versions": {
+        "0.2.0": {
+          "name": "top.kuriko.vrchat.avatar-parameter-binder",
+          "version": "0.2.0",
+          "displayName": "Avatar Parameter Binder",
+          "description": "Avatar Parameter Binder",
+          "author": {
+            "name": "SakuranoKuriko",
+            "email": "mao.liz.baka@gmail.com",
+            "url": "https://github.com/SakuranoKuriko"
+          },
+          "url" : "https://github.com/SakuranoKuriko/top.kuriko.vrchat.avatar-parameter-binder/releases/download/v0.2/AvatarParameterBinder-v0.2-65b1a21.zip?",
+          "unity": "2022.3",
+          "dependencies": {
+            "nadena.dev.modular-avatar": ">=1.9.10 <2.0.0-a",
+            "top.kuriko.common": ">=0.1.1"
+          },
+          "vpmDependencies": {
+            "nadena.dev.modular-avatar": ">=1.9.10 <2.0.0-a",
+            "top.kuriko.common": ">=0.1.1"
+          },
+          "repo": "https://sakuranokuriko.github.io/vrchat/vpm.json"
+        }
+      }
+    }
+  }
+}
