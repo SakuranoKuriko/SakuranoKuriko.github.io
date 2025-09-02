@@ -117,6 +117,28 @@
             "top.kuriko.common": ">=0.1.1"
           },
           "repo": "https://sakuranokuriko.github.io/vrchat/vpm.json"
+        },
+        "0.2.3": {
+          "name": "top.kuriko.vrchat.avatar-parameter-binder",
+          "version": "0.2.3",
+          "displayName": "Avatar Parameter Binder",
+          "description": "Avatar Parameter Binder",
+          "author": {
+            "name": "SakuranoKuriko",
+            "email": "mao.liz.baka@gmail.com",
+            "url": "https://github.com/SakuranoKuriko"
+          },
+          "url" : "https://github.com/SakuranoKuriko/top.kuriko.vrchat.avatar-parameter-binder/releases/download/v0.2.3/AvatarParameterBinder-v0.2.3-1bb1c1c.zip?",
+          "unity": "2022.3",
+          "dependencies": {
+            "nadena.dev.modular-avatar": ">=1.9.10 <2.0.0-a",
+            "top.kuriko.common": ">=0.1.1"
+          },
+          "vpmDependencies": {
+            "nadena.dev.modular-avatar": ">=1.9.10 <2.0.0-a",
+            "top.kuriko.common": ">=0.1.1"
+          },
+          "repo": "https://sakuranokuriko.github.io/vrchat/vpm.json"
         }
       }
     }
